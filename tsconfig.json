@@ -8,6 +8,7 @@
     "noUnusedLocals": true,
     "sourceMap": false,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "strict": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
