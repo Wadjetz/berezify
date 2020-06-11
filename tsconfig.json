@@ -12,11 +12,6 @@
     "strict": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "src/*"
-      ]
-    },
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,

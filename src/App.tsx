@@ -1,7 +1,9 @@
 import React from "react"
-import { CvData, Lang } from "./cv/models"
+
+import { CvData } from "./cv/models"
 import { Cv } from "./cv/Cv"
-import { LangContext } from "./LangContext"
+import { Lang } from "./intl/Intl"
+import { IntlContext, initIntlState } from "./intl/IntlContext"
 
 interface Props {
   cv: CvData
@@ -10,8 +12,8 @@ interface Props {
 
 export function App({ cv, lang }: Props) {
   return (
-    <LangContext.Provider value={lang}>
+    <IntlContext.Provider value={{ ...initIntlState, lang }}>
       <Cv data={cv} />
-    </LangContext.Provider>
+    </IntlContext.Provider>
   )
 }

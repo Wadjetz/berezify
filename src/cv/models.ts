@@ -1,52 +1,49 @@
+import { IntlValue } from "../intl/Intl"
+
 export interface Person {
   firstName: string
   lastName: string
   email: string
   twitter?: string
   linkedin?: string
-  studies: Study[]
-  experiences: Experience[]
   sections: Section[]
 }
 
-export type Lang = "fr" | "en"
-
-export interface IntlValue<T> {
-  fr: T
-  en: T
-}
-
 export interface Section {
-  title: IntlValue<string>
+  title: IntlValue
   items: Item[]
 }
 
 export interface Item {
-  title: IntlValue<string>
-  description?: IntlValue<string>
+  title: IntlValue
+  description?: IntlValue
 }
 
 export interface Experience {
-  startDate: string
-  endDate?: string
+  startDate: Date
+  endDate?: Date
   current?: boolean
-  title: IntlValue<string>
-  company: IntlValue<string>
+  freelance: boolean
+  title: IntlValue
+  company: string
   place: string
-  description?: IntlValue<string>
+  description: IntlValue
+  technologies: string[]
 }
 
 export interface Study {
   startDate: string
   endDate?: string
   current?: boolean
-  studyTitle: IntlValue<string>
-  studyName: IntlValue<string>
+  studyTitle: IntlValue
+  studyName: IntlValue
   place: string
-  description?: IntlValue<string>
+  description?: IntlValue
 }
 
 export interface CvData {
-  title: IntlValue<string>
+  title: IntlValue
   person: Person
+  studies: Study[]
+  experiences: Experience[]
 }

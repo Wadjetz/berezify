@@ -1,18 +1,18 @@
 import React from "react"
 import { StyleSheet, css } from "aphrodite"
 import { Study } from "./models"
-import { LangContext } from "../LangContext"
+import { useIntl } from "../intl/useIntl"
 
 interface Props {
   study: Study
 }
 
 export function StudySection({ study }: Props) {
-  const lang = React.useContext(LangContext)
+  const intl = useIntl()
   return (
     <div className={css(styles.container)}>
-      <h1 className={css(styles.title)}>{study.studyTitle[lang]}</h1>
-      <h2 className={css(styles.name)}>{study.studyName[lang]}</h2>
+      <h3 className={css(styles.title)}>{intl(study.studyTitle)}</h3>
+      <h4 className={css(styles.name)}>{intl(study.studyName)}</h4>
     </div>
   )
 }
