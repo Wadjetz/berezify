@@ -28,7 +28,12 @@ export interface Experience {
   company: string
   place: string
   description: IntlValue
-  technologies: string[]
+  technologies: Technology[]
+}
+
+export interface Technology {
+  name: string,
+  icon: string,
 }
 
 export interface Study {

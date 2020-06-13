@@ -24,9 +24,9 @@ export function ExperienceSection({ experience }: Props) {
       </h4>
       <p className={css(styles.description)}>{intl(experience.description)}</p>
       <ul className={css(styles.technologies)}>
-        {experience.technologies.map(s => (
-          <li key={s} className={css(styles.technology)}>
-            {s}
+        {experience.technologies.map(({ name }) => (
+          <li key={name} className={css(styles.technology)}>
+            {name}
           </li>
         ))}
       </ul>
