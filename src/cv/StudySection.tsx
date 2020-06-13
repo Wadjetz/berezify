@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, css } from "aphrodite"
+import { StyleSheet, css, CSSProperties } from "aphrodite"
 import { Study } from "./models"
 import { useIntl } from "../intl/useIntl"
 
@@ -17,8 +17,10 @@ export function StudySection({ study }: Props) {
   )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create<Record<string, CSSProperties>>({
   title: {},
   name: {},
-  container: {}
+  container: {
+    paddingBottom: 20
+  }
 })

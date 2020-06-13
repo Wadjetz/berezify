@@ -49,7 +49,6 @@ export const iOS: Technology = {
   icon: "DiApple"
 }
 
-
 export const cvData: CvData = {
   title: {
     fr: "Freelance Full Stack Developer",
@@ -83,11 +82,11 @@ export const cvData: CvData = {
     {
       title: {
         fr: "Full Stack Developer",
-        en: "Full Stack Developer",
+        en: "Full Stack Developer"
       },
       description: {
         fr: "Development of the bank as a service system with microservices and event streaming",
-        en: "Development of the bank as a service system with microservices and event streaming",
+        en: "Development of the bank as a service system with microservices and event streaming"
       },
       freelance: true,
       company: "Ditto Service",
@@ -99,23 +98,23 @@ export const cvData: CvData = {
     {
       title: {
         fr: "Full-stack Developer",
-        en: "Full-stack Developer",
+        en: "Full-stack Developer"
       },
       description: {
         fr: "Full stack developer with Scala and React. Developer of the native mobile SDK with kotlin and swift",
-        en: "Full stack developer with Scala and React. Developer of the native mobile SDK with kotlin and swift",
+        en: "Full stack developer with Scala and React. Developer of the native mobile SDK with kotlin and swift"
       },
       freelance: false,
       company: "ReachFive",
       place: "Paris, France",
       startDate: new Date(2018, 10, 1),
       endDate: new Date(2019, 11, 1),
-      technologies: [scala, typescript, react, swift, kotlin, android, iOS],
+      technologies: [scala, typescript, react, swift, kotlin, android, iOS]
     },
     {
       title: {
         fr: "Software Architect",
-        en: "Software Architect",
+        en: "Software Architect"
       },
       description: {
         fr: `Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
@@ -130,7 +129,7 @@ export const cvData: CvData = {
       place: "Paris, France",
       startDate: new Date(2014, 9, 1),
       endDate: new Date(2018, 10, 1),
-      technologies: [scala, typescript, react, reactNative, playFramework, redux, iOS],
+      technologies: [scala, typescript, react, reactNative, playFramework, redux, iOS]
     }
   ],
   studies: [
@@ -161,8 +160,8 @@ export const cvData: CvData = {
       place: "Puteaux",
       description: {
         fr: `Les bases de la programmation en C/C++, Java, PHP, Javascript, HTML, CSS, les basses des données MySql, Reseaux et Linux`,
-        en: `Programming fondamantals`,
-      },
+        en: `Programming fondamantals`
+      }
     }
   ]
 }

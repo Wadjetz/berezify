@@ -32,8 +32,8 @@ export interface Experience {
 }
 
 export interface Technology {
-  name: string,
-  icon: string,
+  name: string
+  icon: string
 }
 
 export interface Study {
