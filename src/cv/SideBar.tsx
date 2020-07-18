@@ -14,10 +14,11 @@ export function SideBar({ data }: Props) {
   return (
     <aside className={css(styles.aside)}>
       <section className={css(styles.contact)}>
-        <h2 className={css(styles.contactTitle)}>{message("contactTitle")}</h2>
-        <div className={css(styles.email)}>{data.person.email}</div>
+        <h2 className={css(styles.sideBarSectionTitle)}>{message("contactTitle")}</h2>
+        <a href={`mailto:${data.person.email}`} className={css(styles.email)}>{data.person.email}</a>
       </section>
       <section>
+        <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
         {data.studies.map(study => (
           <StudySection key={intl(study.studyName)} study={study} />
         ))}
@@ -35,11 +36,13 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   contact: {
     marginBottom: 20
   },
-  contactTitle: {
+  email: {
+    
+  },
+  sideBarSectionTitle: {
     fontSize: "1.2rem",
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 15,
     color: "#666666"
-  },
-  email: {}
+  }
 })
