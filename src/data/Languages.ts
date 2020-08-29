@@ -6,20 +6,20 @@ export const languages: Skill[] = [
       fr: "Anglais",
       en: "English"
     },
-    level: 4,
+    level: 4
   },
   {
     title: {
       fr: "Français",
       en: "Franch"
     },
-    level: 5,
+    level: 5
   },
   {
     title: {
       fr: "Russe",
       en: "Russian"
     },
-    level: 5,
+    level: 5
   }
 ]

@@ -42,5 +42,5 @@ export const programmingLanguages: Skill[] = [
       en: "Kotlin"
     },
     level: 5
-  },
+  }
 ]

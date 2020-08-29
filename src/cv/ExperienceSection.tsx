@@ -16,7 +16,7 @@ export function ExperienceSection({ experience }: Props) {
   return (
     <div className={css(styles.container)}>
       <h3 className={css(styles.title)}>
-      {experience.freelance ? "Freelance" : undefined} {intl(experience.title)}
+        {experience.freelance ? "Freelance" : undefined} {intl(experience.title)}
       </h3>
       <h4 className={css(styles.company)}>
         {experience.company} - {format(experience.startDate, "MMMM yyyy", { locale })} -{" "}

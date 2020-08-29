@@ -11,16 +11,14 @@ export function SkillSection({ skill }: Props) {
   const intl = useIntl()
   return (
     <div className={css(styles.container)}>
-      <span className={css(styles.title)}>
-        {intl(skill.title)}
-      </span>
+      <span className={css(styles.title)}>{intl(skill.title)}</span>
     </div>
   )
 }
 
 const styles = StyleSheet.create<Record<string, CSSProperties>>({
   container: {
-    marginBottom: 15,
+    marginBottom: 15
   },
   title: {
     padding: 4,
