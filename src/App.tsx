@@ -1,12 +1,19 @@
-import * as React from "react"
-import { StyleSheet, css } from "aphrodite"
+import React from "react"
 
-export function App() {
-  return <div className={css(styles.container)}>Hello World</div>
+import { CvData } from "./cv/models"
+import { Cv } from "./cv/Cv"
+import { Lang } from "./intl/Intl"
+import { IntlContext, initIntlState } from "./intl/IntlContext"
+
+interface Props {
+  cv: CvData
+  lang: Lang
 }
 
-const styles = StyleSheet.create({
-  container: {
-    color: "red"
-  }
-})
+export function App({ cv, lang }: Props) {
+  return (
+    <IntlContext.Provider value={{ ...initIntlState, lang }}>
+      <Cv data={cv} />
+    </IntlContext.Provider>
+  )
+}
