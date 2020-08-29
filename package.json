@@ -5,6 +5,7 @@
   "scripts": {
     "start": "ts-node src/index.tsx",
     "dev": "ts-node-dev src/index.tsx",
+    "check": "tsc --noEmit",
     "format": "prettier --write \"src/**/{*.ts,*.tsx}\"",
     "format-check": "prettier --check \"src/**/{*.ts,*.tsx}\""
   },
