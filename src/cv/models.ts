@@ -6,17 +6,6 @@ export interface Person {
   email: string
   twitter?: string
   linkedin?: string
-  sections: Section[]
-}
-
-export interface Section {
-  title: IntlValue
-  items: Item[]
-}
-
-export interface Item {
-  title: IntlValue
-  description?: IntlValue
 }
 
 export interface Experience {
@@ -51,4 +40,19 @@ export interface CvData {
   person: Person
   studies: Study[]
   experiences: Experience[]
+  skills: Skills
+}
+
+export interface Skills {
+  programmingLanguages: Skill[]
+  languages: Skill[]
+  librairies: Skill[]
+  databases: Skill[]
+  others: Skill[]
+}
+
+export interface Skill {
+  title: IntlValue
+  description?: IntlValue
+  level?: number
 }
