@@ -3,6 +3,7 @@ import { StyleSheet, css, CSSProperties } from "aphrodite/no-important"
 import { CvData } from "./models"
 import { StudySection } from "./StudySection"
 import { useIntl, useMesages } from "../intl/useIntl"
+import { SkillSection } from "./SkillSection"
 
 interface Props {
   data: CvData
@@ -21,6 +22,12 @@ export function SideBar({ data }: Props) {
         <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
         {data.studies.map(study => (
           <StudySection key={intl(study.studyName)} study={study} />
+        ))}
+      </section>
+      <section className={css(styles.skills)}>
+        <h2 className={css(styles.sideBarSectionTitle)}>{message("skillsTitle")}</h2>
+        {data.skills.programmingLanguages.concat(data.skills.librairies).concat(data.skills.databases).map(skill => (
+          <SkillSection key={intl(skill.title)} skill={skill} />
         ))}
       </section>
     </aside>
@@ -44,5 +51,9 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     fontWeight: "bold",
     marginBottom: 15,
     color: "#666666"
+  },
+  skills: {
+    display: "flex",
+    flexDirection: "column",
   }
 })

@@ -7,6 +7,10 @@ export const messages = {
     fr: "Etudes",
     en: "Stydies"
   },
+  skillsTitle: {
+    fr: "Competences",
+    en: "Skills"
+  },
   experiencesTitle: {
     fr: "Expériences professionnelles",
     en: "Work experiences"
