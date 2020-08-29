@@ -1,5 +1,18 @@
 import { Experience } from "src/cv/models"
-import { scala, typescript, kafka, postgreSql, react, swift, kotlin, android, iOS, reactNative, playFramework, redux } from "./Technologies"
+import {
+  scala,
+  typescript,
+  kafka,
+  postgreSql,
+  react,
+  swift,
+  kotlin,
+  android,
+  iOS,
+  reactNative,
+  playFramework,
+  redux
+} from "./Technologies"
 
 export const experiences: Experience[] = [
   {

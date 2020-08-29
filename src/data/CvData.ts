@@ -13,7 +13,7 @@ export const cvData: CvData = {
   person: {
     firstName: "Egor",
     lastName: "Berezovskiy",
-    email: "berezify@tuta.io",
+    email: "berezify@tuta.io"
   },
   experiences: experiences,
   studies: studies,
@@ -35,7 +35,7 @@ export const cvData: CvData = {
           en: "MongoDB"
         },
         level: 5
-      },
+      }
     ],
     others: [
       {
@@ -46,13 +46,13 @@ export const cvData: CvData = {
         description: {
           fr: "CCNA 1",
           en: "CCNA 1"
-        },
+        }
       },
       {
         title: {
           fr: "Programmation fonctionnelle",
           en: "Functional programming"
-        },
+        }
       },
       {
         title: {
@@ -62,7 +62,7 @@ export const cvData: CvData = {
         description: {
           fr: "Scrum et Kanban",
           en: "Scrum and Kanban"
-        },
+        }
       }
     ]
   }

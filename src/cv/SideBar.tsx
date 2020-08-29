@@ -16,7 +16,9 @@ export function SideBar({ data }: Props) {
     <aside className={css(styles.aside)}>
       <section className={css(styles.contact)}>
         <h2 className={css(styles.sideBarSectionTitle)}>{message("contactTitle")}</h2>
-        <a href={`mailto:${data.person.email}`} className={css(styles.email)}>{data.person.email}</a>
+        <a href={`mailto:${data.person.email}`} className={css(styles.email)}>
+          {data.person.email}
+        </a>
       </section>
       <section>
         <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
@@ -26,9 +28,12 @@ export function SideBar({ data }: Props) {
       </section>
       <section className={css(styles.skills)}>
         <h2 className={css(styles.sideBarSectionTitle)}>{message("skillsTitle")}</h2>
-        {data.skills.programmingLanguages.concat(data.skills.librairies).concat(data.skills.databases).map(skill => (
-          <SkillSection key={intl(skill.title)} skill={skill} />
-        ))}
+        {data.skills.programmingLanguages
+          .concat(data.skills.librairies)
+          .concat(data.skills.databases)
+          .map(skill => (
+            <SkillSection key={intl(skill.title)} skill={skill} />
+          ))}
       </section>
     </aside>
   )
@@ -43,9 +48,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   contact: {
     marginBottom: 20
   },
-  email: {
-    
-  },
+  email: {},
   sideBarSectionTitle: {
     fontSize: "1.2rem",
     fontWeight: "bold",
@@ -54,6 +57,6 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   skills: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column"
   }
 })
