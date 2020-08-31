@@ -8,15 +8,16 @@ import { Content } from "./Content"
 
 interface Props {
   data: CvData
+  isPdf: boolean
 }
 
-export function Cv({ data }: Props) {
+export function Cv({ data, isPdf }: Props) {
   const intl = useIntl()
   return (
     <div className={css(styles.container)}>
       <main className={css(styles.cv)}>
         <Header title={intl(data.title)} name={`${data.person.firstName} ${data.person.lastName}`} />
-        <SideBar data={data} />
+        <SideBar isPdf={isPdf} data={data} />
         <Content data={data} />
       </main>
     </div>

@@ -8,12 +8,13 @@ import { IntlContext, initIntlState } from "./intl/IntlContext"
 interface Props {
   cv: CvData
   lang: Lang
+  isPdf?: boolean
 }
 
-export function App({ cv, lang }: Props) {
+export function App({ cv, lang, isPdf = false }: Props) {
   return (
     <IntlContext.Provider value={{ ...initIntlState, lang }}>
-      <Cv data={cv} />
+      <Cv data={cv} isPdf={isPdf} />
     </IntlContext.Provider>
   )
 }

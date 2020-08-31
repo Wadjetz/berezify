@@ -7,9 +7,10 @@ import { SkillSection } from "./SkillSection"
 
 interface Props {
   data: CvData
+  isPdf: boolean
 }
 
-export function SideBar({ data }: Props) {
+export function SideBar({ data, isPdf }: Props) {
   const message = useMesages()
   const intl = useIntl()
   return (
@@ -20,9 +21,11 @@ export function SideBar({ data }: Props) {
           {data.person.email}
         </a>
       </section>
-      <div className={css(styles.pdf)}>
-        <a href="/cv/pdf">Download PDF</a>
-      </div>
+      {!isPdf ? (
+        <div className={css(styles.pdf)}>
+          <a href="/cv/pdf">Download PDF</a>
+        </div>
+      ) : undefined}
       <section>
         <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
         {data.studies.map(study => (
