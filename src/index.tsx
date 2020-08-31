@@ -19,7 +19,7 @@ app.get("/", (_, res) => res.send(template))
 async function generatePDF(url: string) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
-  await page.goto(url, { waitUntil: 'networkidle2' })
+  await page.goto(url, { waitUntil: "networkidle2" })
   await page.emulateMediaType("screen")
   const pdf = await page.pdf({
     preferCSSPageSize: true,
@@ -32,9 +32,9 @@ async function generatePDF(url: string) {
 app.get("/cv/pdf", async (_, res) => {
   const pdf = await generatePDF("https://berezify.fr")
   res.set({
-    'Content-Type': 'application/pdf',
-    'Content-Length': pdf.length,
-    'Content-disposition': 'attachment; filename="CV.pdf"',
+    "Content-Type": "application/pdf",
+    "Content-Length": pdf.length,
+    "Content-disposition": 'attachment; filename="CV.pdf"'
   })
   res.send(pdf)
 })
