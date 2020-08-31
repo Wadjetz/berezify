@@ -30,7 +30,9 @@ async function generatePDF(html: string) {
 }
 
 app.get("/cv/pdf", async (_, res) => {
-  const { html, css } = StyleSheetServer.renderStatic(() => ReactDOMServer.renderToString(<App lang="fr" cv={cvData} isPdf />))
+  const { html, css } = StyleSheetServer.renderStatic(() =>
+    ReactDOMServer.renderToString(<App lang="fr" cv={cvData} isPdf />)
+  )
   const template = renderTemplate(html, css.content)
   const pdf = await generatePDF(template)
   res.set({
