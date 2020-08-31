@@ -17,7 +17,7 @@ const template = renderTemplate(html, css.content)
 app.get("/", (_, res) => res.send(template))
 
 async function generatePDF(html: string) {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
   const page = await browser.newPage()
   await page.setContent(html)
   await page.emulateMediaType("screen")
