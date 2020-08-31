@@ -20,6 +20,9 @@ export function SideBar({ data }: Props) {
           {data.person.email}
         </a>
       </section>
+      <div className={css(styles.pdf)}>
+        <a href="/cv/pdf">Download PDF</a>
+      </div>
       <section>
         <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
         {data.studies.map(study => (
@@ -49,6 +52,9 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     marginBottom: 20
   },
   email: {},
+  pdf: {
+    marginBottom: 20
+  },
   sideBarSectionTitle: {
     fontSize: "1.2rem",
     fontWeight: "bold",
