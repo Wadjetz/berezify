@@ -19,9 +19,11 @@ export function Header({ title, name, showPdfDownload }: Props) {
         <h2 className={css(styles.name)}>{name}</h2>
       </div>
       {showPdfDownload ? (
-        <a href={`/cv/pdf?lang=${lang}`}>
-          <VscFilePdf size="30" color="#FFFFFF" />
-        </a>
+        <div>
+          <a href={`/cv/pdf?lang=${lang}`}>
+            <VscFilePdf size="30" color="#FFFFFF" />
+          </a>
+        </div>
       ) : undefined}
     </header>
   )

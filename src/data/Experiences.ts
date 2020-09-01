@@ -21,8 +21,7 @@ export const experiences: Experience[] = [
       en: "Scala Developer"
     },
     description: {
-      fr:
-        `
+      fr: `
 Une application de visualisation des métadonnées des bases des données pour les data scientistes
 - Création des nouvelles API plus génériques pour l'utilisation par plusieurs applications différentes
 - Développement des nouvelles fonctionnalités côté front
