@@ -27,8 +27,8 @@ export const librairies: Skill[] = [
   },
   {
     title: {
-      fr: "Svelt",
-      en: "Svelt"
+      fr: "Svelte.js",
+      en: "Svelte.js"
     }
   }
 ]

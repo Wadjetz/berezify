@@ -20,15 +20,16 @@ export function ExperienceSection({ experience }: Props) {
         {experience.freelance ? "Freelance" : undefined} {intl(experience.title)}
       </h3>
       <div className={css(styles.infos)}>
-        <div className={css(styles.company)}>
-          {experience.company}
-        </div>
+        <div className={css(styles.company)}>{experience.company}</div>
         <div className={css(styles.dates)}>
           {format(experience.startDate, "MMMM yyyy", { locale })} -{" "}
           {experience.endDate ? format(experience.endDate, "MMMM yyyy", { locale }) : undefined}
         </div>
       </div>
-      <div className={css(styles.description)} dangerouslySetInnerHTML={{ __html: MarkdownIt().render(intl(experience.description)) }} />
+      <div
+        className={css(styles.description)}
+        dangerouslySetInnerHTML={{ __html: MarkdownIt().render(intl(experience.description)) }}
+      />
       <ul className={css(styles.technologies)}>
         {experience.technologies.map(({ name }) => (
           <li key={name} className={css(styles.technology)}>
@@ -57,10 +58,10 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   company: {
     fontSize: "1.1rem",
-    color: "#3d7ad9",
+    color: "#3d7ad9"
   },
   dates: {
-    fontSize: "1rem",
+    fontSize: "1rem"
   },
   description: {
     fontSize: "0.9rem",
@@ -68,7 +69,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   technologies: {
     display: "flex",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   technology: {
     padding: 4,

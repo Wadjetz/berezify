@@ -7,20 +7,30 @@ import { App } from "./App"
 import { cvData } from "./data/CvData"
 import { renderTemplate } from "./template/indexTemplate"
 import { generatePDF } from "./pdf"
+import { Cv } from "./cv/Cv"
+import { CvPdf } from "./cv/CvPdf"
 
 const app = express()
 
-app.get("/", (_, res) => res.send(""))
-
-app.get("/cv", (_, res) => {
-  const { html, css } = StyleSheetServer.renderStatic(() => ReactDOMServer.renderToString(<App lang="fr" cv={cvData} />))
+app.get("/", (_, res) => {
+  const { html, css } = StyleSheetServer.renderStatic(() =>
+    ReactDOMServer.renderToString(
+      <App lang="fr">
+        <Cv data={cvData} />
+      </App>
+    )
+  )
   const template = renderTemplate(html, css.content)
   res.send(template)
 })
 
 app.get("/cv/pdf", async (_, res) => {
   const { html, css } = StyleSheetServer.renderStatic(() =>
-    ReactDOMServer.renderToString(<App lang="fr" cv={cvData} isPdf />)
+    ReactDOMServer.renderToString(
+      <App lang="fr">
+        <CvPdf data={cvData} isPdf />
+      </App>
+    )
   )
   const template = renderTemplate(html, css.content)
   const pdf = await generatePDF(template)

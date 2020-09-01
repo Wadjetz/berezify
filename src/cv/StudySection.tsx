@@ -26,7 +26,8 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   name: {
     fontSize: "1rem",
-    paddingBottom: 5
+    paddingBottom: 5,
+    color: "#3d7ad9"
   },
   description: {
     fontSize: "0.9rem",

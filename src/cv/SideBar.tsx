@@ -22,7 +22,9 @@ export function SideBar({ data, isPdf }: Props) {
         </a>
       </section>
       {!isPdf ? (
-        <a className={css(styles.pdf)} href="/cv/pdf">Download PDF</a>
+        <a className={css(styles.pdf)} href="/cv/pdf">
+          Download PDF
+        </a>
       ) : undefined}
       <section>
         <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
@@ -53,18 +55,22 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     marginBottom: 20
   },
   email: {
-    color: "#3d7ad9",
+    color: "#3d7ad9"
   },
   pdf: {
     display: "block",
     marginBottom: 20,
-    color: "#3d7ad9",
+    color: "#3d7ad9"
   },
   sideBarSectionTitle: {
     fontSize: "1.2rem",
     fontWeight: "bold",
-    marginBottom: 15,
-    color: "#666666"
+    marginBottom: 10,
+    paddingBottom: 7,
+    color: "#3d7ad9",
+    borderBottomColor: "#3d7ad9",
+    borderBottomStyle: "solid",
+    borderBottomWidth: 1
   },
   skills: {
     display: "flex",
