@@ -22,9 +22,16 @@ export const experiences: Experience[] = [
     },
     description: {
       fr:
-        "Developpement d'une application en Scala de visualisation des metadatas des bases des données destiné aux data scientistes",
-      en:
-        "Developpement d'une application en Scala de visualisation des metadatas des bases des données destiné aux data scientistes"
+        `
+Une application de visualisation des métadonnées des bases des données pour les data scientistes
+- Création des nouvelles API plus génériques pour l'utilisation par plusieurs applications différentes
+- Développement des nouvelles fonctionnalités côté front
+        `,
+      en: `
+A database metadata visualization application for data scientists
+- Creation of new, more generic APIs for use by several different applications
+- Development of new front-end features
+        `
     },
     freelance: true,
     company: "Zeenea",
@@ -39,8 +46,18 @@ export const experiences: Experience[] = [
       en: "Full Stack Developer"
     },
     description: {
-      fr: "Development of the bank as a service system with microservices and event streaming",
-      en: "Development of the bank as a service system with microservices and event streaming"
+      fr: `
+Développement from scratch d'une plateforme et des API bancaire nouvelles générations
+
+- Une architecture microservice basé sur l'event-streaming permettant un découplage et modularité importante
+- Développement de la partie catalogue de la plateforme. Création des nouvelles API et microservices
+      `,
+      en: `
+Development from scratch of a new generation banking platform and APIs
+
+- A microservice architecture based on event-streaming allowing significant decoupling and modularity
+- Development of the catalog part of the platform. Creation of new APIs and microservices
+      `
     },
     freelance: true,
     company: "Ditto Service",

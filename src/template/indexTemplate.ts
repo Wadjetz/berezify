@@ -22,7 +22,7 @@ const resetCss = `
   del, dfn, em, img, ins, kbd, q, s, samp,
   small, strike, strong, sub, sup, tt, var,
   b, u, i, center,
-  dl, dt, dd, ol, ul, li,
+  dl, dt, dd, ol,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td,
   article, aside, canvas, details, embed, 
@@ -44,9 +44,6 @@ const resetCss = `
   body {
     line-height: 1;
   }
-  ol, ul {
-    list-style: none;
-  }
   blockquote, q {
     quotes: none;
   }
@@ -58,6 +55,17 @@ const resetCss = `
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  ol, ul {
+    padding: 0 0 0 20px;
+    margin: 10px 0 10px 0;
+    vertical-align: baseline;
+  }
+  li {
+    margin: 5px 0 0 0;
+  }
+  p {
+    margin: 10px 0 10px 0;
   }
   *, *::before, *::after {
     box-sizing: border-box;

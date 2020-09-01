@@ -69,7 +69,10 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   technologies: {
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
   },
   technology: {
     padding: 4,
