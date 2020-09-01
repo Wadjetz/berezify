@@ -1,8 +1,9 @@
-export function renderTemplate(html: string, css: string) {
+export function renderTemplate(title: string, html: string, css: string) {
   return `
     <html>
       <head>
         <meta charset="UTF-8" />
+        <title>${title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>${resetCss}</style>
         <style data-aphrodite>${css}</style>

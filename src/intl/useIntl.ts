@@ -3,11 +3,16 @@ import { enUS, fr } from "date-fns/locale"
 
 import { IntlContext } from "./IntlContext"
 import { Messages } from "./messages"
-import { IntlValue } from "./Intl"
+import { IntlValue, Lang } from "./Intl"
 
 export function useDateLocal() {
   const { lang } = React.useContext(IntlContext)
   return lang === "fr" ? fr : enUS
+}
+
+export function useLang(): Lang {
+  const { lang } = React.useContext(IntlContext)
+  return lang
 }
 
 export function useMesages(): (key: keyof Messages) => string {

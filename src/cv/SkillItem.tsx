@@ -7,7 +7,7 @@ interface Props {
   skill: Skill
 }
 
-export function SkillSection({ skill }: Props) {
+export function SkillItem({ skill }: Props) {
   const intl = useIntl()
   return (
     <div className={css(styles.container)}>

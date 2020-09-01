@@ -3,42 +3,35 @@ import { StyleSheet, css, CSSProperties } from "aphrodite/no-important"
 import { CvData } from "./models"
 import { StudySection } from "./StudySection"
 import { useIntl, useMesages } from "../intl/useIntl"
-import { SkillSection } from "./SkillSection"
+import { SkillItem } from "./SkillItem"
+import { Contact } from "./Contact"
+import { SectionTitle } from "./SectionTitle"
 
 interface Props {
+  phone?: string
   data: CvData
-  isPdf: boolean
 }
 
-export function SideBar({ data, isPdf }: Props) {
+export function SideBar({ data, phone }: Props) {
   const message = useMesages()
   const intl = useIntl()
+
   return (
     <aside className={css(styles.aside)}>
-      <section className={css(styles.contact)}>
-        <h2 className={css(styles.sideBarSectionTitle)}>{message("contactTitle")}</h2>
-        <a href={`mailto:${data.person.email}`} className={css(styles.email)}>
-          {data.person.email}
-        </a>
-      </section>
-      {!isPdf ? (
-        <a className={css(styles.pdf)} href="/cv/pdf">
-          Download PDF
-        </a>
-      ) : undefined}
+      <Contact phone={phone} person={data.person} />
       <section>
-        <h2 className={css(styles.sideBarSectionTitle)}>{message("stydiesTitle")}</h2>
+        <SectionTitle title={message("stydiesTitle")} />
         {data.studies.map(study => (
           <StudySection key={intl(study.studyName)} study={study} />
         ))}
       </section>
       <section className={css(styles.skills)}>
-        <h2 className={css(styles.sideBarSectionTitle)}>{message("skillsTitle")}</h2>
+        <SectionTitle title={message("skillsTitle")} />
         {data.skills.programmingLanguages
           .concat(data.skills.librairies)
           .concat(data.skills.databases)
           .map(skill => (
-            <SkillSection key={intl(skill.title)} skill={skill} />
+            <SkillItem key={intl(skill.title)} skill={skill} />
           ))}
       </section>
     </aside>
@@ -53,24 +46,6 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   contact: {
     marginBottom: 20
-  },
-  email: {
-    color: "#3d7ad9"
-  },
-  pdf: {
-    display: "block",
-    marginBottom: 20,
-    color: "#3d7ad9"
-  },
-  sideBarSectionTitle: {
-    fontSize: "1.2rem",
-    fontWeight: "bold",
-    marginBottom: 10,
-    paddingBottom: 7,
-    color: "#3d7ad9",
-    borderBottomColor: "#3d7ad9",
-    borderBottomStyle: "solid",
-    borderBottomWidth: 1
   },
   skills: {
     display: "flex",
