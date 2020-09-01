@@ -11,11 +11,13 @@
   "author": "Egor Berezovskiy <berezify@tuta.io>",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "puppeteer": "5.2.1"
   },
   "devDependencies": {
     "@tsconfig/svelte": "1.0.10",
     "@types/express": "4.17.8",
+    "@types/puppeteer": "3.0.1",
     "prettier": "2.1.1",
     "prettier-plugin-svelte": "1.2.0",
     "svelte": "3.24.1",
