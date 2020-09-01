@@ -1,6 +1,7 @@
 import React from "react"
 import { StyleSheet, css, CSSProperties } from "aphrodite"
 import { format } from "date-fns"
+import MarkdownIt from "markdown-it"
 
 import { Experience } from "./models"
 import { useIntl, useDateLocal } from "../intl/useIntl"
@@ -22,7 +23,7 @@ export function ExperienceSection({ experience }: Props) {
         {experience.company} - {format(experience.startDate, "MMMM yyyy", { locale })} -{" "}
         {experience.endDate ? format(experience.endDate, "MMMM yyyy", { locale }) : undefined} - {experience.place}
       </h4>
-      <p className={css(styles.description)}>{intl(experience.description)}</p>
+      <p dangerouslySetInnerHTML={{ __html: MarkdownIt().render(intl(experience.description)) }} />
       <ul className={css(styles.technologies)}>
         {experience.technologies.map(({ name }) => (
           <li key={name} className={css(styles.technology)}>

@@ -71,12 +71,14 @@ export const experiences: Experience[] = [
       en: "Software Architect"
     },
     description: {
-      fr: `Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
-      - Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
-      - Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`,
-      en: `Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
-      - Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
-      - Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`
+      fr: `
+- Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
+- Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
+- Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`,
+      en: `
+- Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
+- Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
+- Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`
     },
     freelance: false,
     company: "Zengularity (Fabernovel)",
