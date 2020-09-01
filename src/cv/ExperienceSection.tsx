@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, css, CSSProperties } from "aphrodite"
+import { StyleSheet, css, CSSProperties } from "aphrodite/no-important"
 import { format } from "date-fns"
 import MarkdownIt from "markdown-it"
 
@@ -19,11 +19,16 @@ export function ExperienceSection({ experience }: Props) {
       <h3 className={css(styles.title)}>
         {experience.freelance ? "Freelance" : undefined} {intl(experience.title)}
       </h3>
-      <h4 className={css(styles.company)}>
-        {experience.company} - {format(experience.startDate, "MMMM yyyy", { locale })} -{" "}
-        {experience.endDate ? format(experience.endDate, "MMMM yyyy", { locale }) : undefined} - {experience.place}
-      </h4>
-      <p dangerouslySetInnerHTML={{ __html: MarkdownIt().render(intl(experience.description)) }} />
+      <div className={css(styles.infos)}>
+        <div className={css(styles.company)}>
+          {experience.company}
+        </div>
+        <div className={css(styles.dates)}>
+          {format(experience.startDate, "MMMM yyyy", { locale })} -{" "}
+          {experience.endDate ? format(experience.endDate, "MMMM yyyy", { locale }) : undefined}
+        </div>
+      </div>
+      <div className={css(styles.description)} dangerouslySetInnerHTML={{ __html: MarkdownIt().render(intl(experience.description)) }} />
       <ul className={css(styles.technologies)}>
         {experience.technologies.map(({ name }) => (
           <li key={name} className={css(styles.technology)}>
@@ -44,16 +49,26 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     fontWeight: "bold",
     paddingBottom: 5
   },
+  infos: {
+    paddingBottom: 5,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
   company: {
     fontSize: "1.1rem",
-    paddingBottom: 5
+    color: "#3d7ad9",
+  },
+  dates: {
+    fontSize: "1rem",
   },
   description: {
     fontSize: "0.9rem",
     paddingBottom: 5
   },
   technologies: {
-    display: "flex"
+    display: "flex",
+    flexWrap: "wrap",
   },
   technology: {
     padding: 4,

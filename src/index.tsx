@@ -2,32 +2,21 @@ import express from "express"
 import { StyleSheetServer } from "aphrodite"
 import React from "react"
 import ReactDOMServer from "react-dom/server"
-import puppeteer from "puppeteer"
 
 import { App } from "./App"
 import { cvData } from "./data/CvData"
 import { renderTemplate } from "./template/indexTemplate"
+import { generatePDF } from "./pdf"
 
 const app = express()
 
-const { html, css } = StyleSheetServer.renderStatic(() => ReactDOMServer.renderToString(<App lang="fr" cv={cvData} />))
+app.get("/", (_, res) => res.send(""))
 
-const template = renderTemplate(html, css.content)
-
-app.get("/", (_, res) => res.send(template))
-
-async function generatePDF(html: string) {
-  const browser = await puppeteer.launch({ args: ["--no-sandbox"] })
-  const page = await browser.newPage()
-  await page.setContent(html)
-  await page.emulateMediaType("screen")
-  const pdf = await page.pdf({
-    preferCSSPageSize: true,
-    printBackground: true
-  })
-  await browser.close()
-  return pdf
-}
+app.get("/cv", (_, res) => {
+  const { html, css } = StyleSheetServer.renderStatic(() => ReactDOMServer.renderToString(<App lang="fr" cv={cvData} />))
+  const template = renderTemplate(html, css.content)
+  res.send(template)
+})
 
 app.get("/cv/pdf", async (_, res) => {
   const { html, css } = StyleSheetServer.renderStatic(() =>

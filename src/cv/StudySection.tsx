@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, css, CSSProperties } from "aphrodite"
+import { StyleSheet, css, CSSProperties } from "aphrodite/no-important"
 import { Study } from "./models"
 import { useIntl } from "../intl/useIntl"
 

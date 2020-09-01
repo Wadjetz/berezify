@@ -72,10 +72,14 @@ export const experiences: Experience[] = [
     },
     description: {
       fr: `
+Reachfive est une startup de gestion d'utilisateurs et d'authentification
+
 - Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
 - Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
 - Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`,
       en: `
+Reachfive is a user management and authentication startup
+
 - Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
 - Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
 - Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`
