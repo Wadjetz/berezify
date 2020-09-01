@@ -5,5 +5,9 @@
   "singleQuote": false,
   "jsxSingleQuote": false,
   "printWidth": 120,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "svelteSortOrder" : "scripts-markup-styles",
+  "svelteStrictMode": true,
+  "svelteBracketNewLine": true,
+  "svelteAllowShorthand": false
 }
