@@ -20,7 +20,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   container: {
     display: "inline-block",
     marginRight: 10,
-    marginBottom: 15,
+    marginBottom: 15
   },
   title: {
     padding: 4,

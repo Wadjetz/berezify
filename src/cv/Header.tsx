@@ -8,10 +8,11 @@ import { Lang } from "src/intl/Intl"
 interface Props {
   title: string
   name: string
+  description: string
   showPdfDownload: boolean
 }
 
-export function Header({ title, name, showPdfDownload }: Props) {
+export function Header({ title, name, description, showPdfDownload }: Props) {
   const lang = useLang()
 
   const nextLang: Lang = lang === "fr" ? "en" : "fr"
@@ -21,6 +22,7 @@ export function Header({ title, name, showPdfDownload }: Props) {
       <div>
         <h1 className={css(styles.title)}>{title}</h1>
         <h2 className={css(styles.name)}>{name}</h2>
+        <p className={css(styles.description)}>{description}</p>
       </div>
       <div className={css(styles.actions)}>
         {showPdfDownload ? (
@@ -69,9 +71,16 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     textDecoration: "none"
   },
   title: {
-    fontSize: "2.1rem",
+    fontSize: "2rem",
     fontWeight: "bold",
-    marginBottom: 15
+    marginBottom: 10
   },
-  name: {}
+  name: {
+    fontSize: "1rem",
+    fontWeight: "bold",
+    marginBottom: 10
+  },
+  description: {
+    fontSize: ".9rem"
+  },
 })

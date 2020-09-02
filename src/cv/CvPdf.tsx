@@ -19,6 +19,7 @@ export function CvPdf({ data, phone }: Props) {
         <Header
           showPdfDownload={false}
           title={intl(data.title)}
+          description={intl(data.person.description)}
           name={`${data.person.firstName} ${data.person.lastName}`}
         />
         <SideBar phone={phone} data={data} />

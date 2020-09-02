@@ -85,7 +85,14 @@ Reachfive est une startup de gestion d'utilisateurs et d'authentification
 - Refactiring du code, clean code et conception des nouvelles fonctionnalités
 - Développement des nouvelles fonctionnalités côté back et front
 `,
-    en: "Full stack developer with Scala and React. Developer of the native mobile SDK with kotlin and swift"
+    en: `
+Reachfive is a user management and authentication startup
+- Implementation of the PKCE, an extension of the OAuth standard which allows to secure mobile applications
+- Development of the native mobile SDK for Android and iOS in Kotlin and Swift
+- Implementation of continuous integration with CircleCI
+- Code refactiring, clean code and design of new features
+- Development of new features on the back-end and front-end
+    `
   },
   technologies: [scala, typescript, react, swift, kotlin, android, iOS, circleCI]
 }
@@ -117,11 +124,21 @@ qui n'hésite pas à utiliser les nouvelles technologies et qui avait créé Pla
   La visualisation des montants et des transactions avec des animations pour une meilleure expérience utilisateur
     `,
     en: `
-Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
+Zengularity is a service company specializing in digital transformation,
+who does not hesitate to use new technologies and who created Play Framework.
 
-- Web developer with Scala, Play Framework, Typescript, React, Redux, React-native.
-- Nestincloud : the cloud platform that lets you build, deploy, run & operate your apps easily.
-- Nomad Mobile : react-native mobile application- MonEspaceUp: react-native mobile application`
+- NestinCloud: is a cloud platform that allows you to easily deploy and manage applications.
+  The platform uses containers, supports databases and auto scaling
+
+- Nomad Mobile: Development of a mobile application in React Native which makes it possible to carry out roadside assistance missions in conjunction with insurers.
+  the troubleshooter has all the information needed to perform troubleshooting.
+  Geolocation and automatic detection of mission steps allow minimal use of the application while driving.
+  Support for offline mode and frequent loss of connection
+
+- GroupeUP: Development of a mobile application in React Native which allows you to manage your restaurant ticket cards.
+  Visualization of amounts and transactions with animations for a better user experience
+
+    `
   },
   technologies: [scala, playFramework, typescript, react, reactNative, redux]
 }

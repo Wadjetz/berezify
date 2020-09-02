@@ -17,7 +17,11 @@ export const cvData: CvData = {
     twitter: "@wadjetz",
     linkedin: "egor-berezovskiy",
     github: "wadjetz",
-    website: "berezify.fr"
+    website: "berezify.fr",
+    description: {
+      fr: `Un développeur passionné qui aime faire la veille, explorer des nouvelles technologies et créer des projets intéressants`,
+      en: `A passionate developer who likes explore new technologies and create interesting projects`
+    }
   },
   experiences: experiences,
   studies: studies,

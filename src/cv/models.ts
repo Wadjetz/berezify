@@ -8,6 +8,7 @@ export interface Person {
   linkedin?: string
   github?: string
   website?: string
+  description: IntlValue
 }
 
 export interface Experience {

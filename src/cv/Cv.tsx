@@ -15,7 +15,12 @@ export function Cv({ data }: Props) {
   return (
     <div className={css(styles.container)}>
       <main className={css(styles.cv)}>
-        <Header showPdfDownload title={intl(data.title)} name={`${data.person.firstName} ${data.person.lastName}`} />
+        <Header
+          showPdfDownload
+          title={intl(data.title)}
+          name={`${data.person.firstName} ${data.person.lastName}`}
+          description={intl(data.person.description)}
+        />
         <SideBar data={data} />
         <Content data={data} />
       </main>
