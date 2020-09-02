@@ -1,5 +1,12 @@
 import React from "react"
-import { AiOutlineMail, AiOutlinePhone, AiOutlineTwitter, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
+import {
+  AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineTwitter,
+  AiFillLinkedin,
+  AiFillGithub,
+  AiOutlineGlobal
+} from "react-icons/ai"
 import { StyleSheet, css, CSSProperties } from "aphrodite/no-important"
 import { useMesages } from "../intl/useIntl"
 import { SectionTitle } from "./SectionTitle"
@@ -10,7 +17,7 @@ interface Props {
   phone?: string
 }
 
-export function Contact({ phone, person: { email, twitter, linkedin, github } }: Props) {
+export function Contact({ phone, person: { email, twitter, linkedin, github, website } }: Props) {
   const message = useMesages()
 
   return (
@@ -22,6 +29,14 @@ export function Contact({ phone, person: { email, twitter, linkedin, github } }:
           {email}
         </a>
       </div>
+      {github ? (
+        <div className={css(styles.item)}>
+          <AiOutlineGlobal size="20" color="#3d7ad9" />
+          <a href={`https://${website}`} className={css(styles.itemLink)}>
+            {website}
+          </a>
+        </div>
+      ) : undefined}
       {github ? (
         <div className={css(styles.item)}>
           <AiFillGithub size="20" color="#3d7ad9" />

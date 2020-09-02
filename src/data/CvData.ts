@@ -16,7 +16,8 @@ export const cvData: CvData = {
     email: "berezify@tuta.io",
     twitter: "@wadjetz",
     linkedin: "egor-berezovskiy",
-    github: "wadjetz"
+    github: "wadjetz",
+    website: "berezify.fr"
   },
   experiences: experiences,
   studies: studies,

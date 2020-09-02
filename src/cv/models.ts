@@ -7,6 +7,7 @@ export interface Person {
   twitter?: string
   linkedin?: string
   github?: string
+  website?: string
 }
 
 export interface Experience {
