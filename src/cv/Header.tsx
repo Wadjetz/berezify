@@ -82,5 +82,5 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   description: {
     fontSize: ".9rem"
-  },
+  }
 })
