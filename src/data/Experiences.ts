@@ -27,12 +27,12 @@ const zeenea: Experience = {
   },
   description: {
     fr: `
-Une application de visualisation des métadonnées des bases des données pour les data scientistes
-- Création des nouvelles API plus génériques pour l'utilisation par plusieurs applications différentes
+Une application de visualisation des métadonnées des bases des données pour les data scientistes.
+Création des nouvelles API plus génériques pour l'utilisation par plusieurs applications différentes
       `,
     en: `
-A database metadata visualization application for data scientists
-- Creation of new, more generic APIs for use by several different applications
+A database metadata visualization application for data scientists.
+Creation of new, more generic APIs for use by several different applications
       `
   },
   technologies: [scala, typescript]

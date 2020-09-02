@@ -33,6 +33,6 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     paddingBottom: 5
   },
   container: {
-    paddingBottom: 15
+    paddingBottom: 5
   }
 })

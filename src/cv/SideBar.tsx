@@ -15,12 +15,12 @@ interface Props {
 function SkillSection({ title, skills }: { title: string; skills: Skill[] }) {
   const intl = useIntl()
   return (
-    <>
+    <div className={css(styles.skillSection)}>
       <h3 className={css(styles.subtitle)}>{title}</h3>
       {skills.map(skill => (
         <SkillItem key={intl(skill.title)} skill={skill} />
       ))}
-    </>
+    </div>
   )
 }
 
@@ -65,5 +65,8 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     fontSize: "1rem",
     fontWeight: "bold",
     paddingBottom: 15
+  },
+  skillSection: {
+    marginBottom: 10
   }
 })

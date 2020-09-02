@@ -18,7 +18,9 @@ export function SkillItem({ skill }: Props) {
 
 const styles = StyleSheet.create<Record<string, CSSProperties>>({
   container: {
-    marginBottom: 15
+    display: "inline-block",
+    marginRight: 10,
+    marginBottom: 15,
   },
   title: {
     padding: 4,
