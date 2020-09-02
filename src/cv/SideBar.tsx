@@ -34,6 +34,7 @@ export function SideBar({ data, phone }: Props) {
       <section className={css(styles.skills)}>
         <SectionTitle title={message("skillsTitle")} />
         <SkillSection title={message("programmingLanguagesTitle")} skills={data.skills.programmingLanguages} />
+        <SkillSection title={message("librariesTitle")} skills={data.skills.libraries} />
         <SkillSection title={message("databasesTitle")} skills={data.skills.databases} />
         <SkillSection title={message("othersTitle")} skills={data.skills.others} />
       </section>
