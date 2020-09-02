@@ -15,14 +15,20 @@ export const libraries: Skill[] = [
   },
   {
     title: {
-      fr: "React / React Native",
-      en: "React / React Native"
+      fr: "React",
+      en: "React"
     }
   },
   {
     title: {
-      fr: "Redux / Hooks",
-      en: "Redux / Hooks"
+      fr: "React Native",
+      en: "React Native"
+    }
+  },
+  {
+    title: {
+      fr: "Redux",
+      en: "Redux"
     }
   },
   {

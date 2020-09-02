@@ -45,7 +45,7 @@ const ditto: Experience = {
   endDate: new Date(2020, 2, 1),
   freelance: true,
   title: {
-    fr: "Full Stack Developer",
+    fr: "Développeur full-stack",
     en: "Full Stack Developer"
   },
   description: {
@@ -72,7 +72,7 @@ const reachFive: Experience = {
   endDate: new Date(2019, 11, 1),
   freelance: false,
   title: {
-    fr: "Full-stack Developer",
+    fr: "Développeur full-stack",
     en: "Full-stack Developer"
   },
   description: {
@@ -104,7 +104,7 @@ const zengularity: Experience = {
   endDate: new Date(2018, 10, 1),
   freelance: false,
   title: {
-    fr: "Software Architect",
+    fr: "Architecte logiciel",
     en: "Software Architect"
   },
   description: {
@@ -116,7 +116,7 @@ qui n'hésite pas à utiliser les nouvelles technologies et qui avait créé Pla
   La plateforme utilise des conteneurs, supporte des bases des données et l'auto scaling
 
 - Nomad Mobile: Développement d'une application mobile en React Native qui permet d'effectuer des missions de dépannage routier en liaison avec des assureurs.
-  le dépanneur dispose de toutes les informations nécessaire pour effectuer pour le dépannage.
+  le dépanneur dispose de toutes les informations nécessaires pour effectuer pour le dépannage.
   La géolocalisation et la détection automatique des étapes de la mission permettent une utilisation minimale de l'application au volant.
   Le support du mode hors-ligne et une perte fréquente de la connexion
 

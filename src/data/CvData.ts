@@ -48,18 +48,12 @@ export const cvData: CvData = {
     others: [
       {
         title: {
-          fr: "Network",
+          fr: "Réseau",
           en: "Network"
         },
         description: {
           fr: "CCNA 1",
           en: "CCNA 1"
-        }
-      },
-      {
-        title: {
-          fr: "Programmation fonctionnelle",
-          en: "Functional programming"
         }
       },
       {
@@ -70,6 +64,12 @@ export const cvData: CvData = {
         description: {
           fr: "Scrum et Kanban",
           en: "Scrum and Kanban"
+        }
+      },
+      {
+        title: {
+          fr: "Programmation fonctionnelle",
+          en: "Functional programming"
         }
       }
     ]
