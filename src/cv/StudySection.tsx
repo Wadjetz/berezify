@@ -26,7 +26,6 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   },
   name: {
     fontSize: "1rem",
-    paddingBottom: 5,
     color: "#3d7ad9"
   },
   description: {
@@ -34,6 +33,6 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     paddingBottom: 5
   },
   container: {
-    paddingBottom: 20
+    paddingBottom: 15
   }
 })

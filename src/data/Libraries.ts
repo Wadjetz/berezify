@@ -1,6 +1,6 @@
 import { Skill } from "src/cv/models"
 
-export const librairies: Skill[] = [
+export const libraries: Skill[] = [
   {
     title: {
       fr: "Play Framework",

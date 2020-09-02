@@ -14,6 +14,22 @@ export const messages = {
   experiencesTitle: {
     fr: "Expériences professionnelles",
     en: "Work experiences"
+  },
+  programmingLanguagesTitle: {
+    fr: "Langages de programmation",
+    en: "Programming languages"
+  },
+  librariesTitle: {
+    fr: "Librairies et frameworks",
+    en: "libraries and frameworks"
+  },
+  databasesTitle: {
+    fr: "Bases de données",
+    en: "Databases"
+  },
+  othersTitle: {
+    fr: "Autres",
+    en: "Others"
   }
 }
 

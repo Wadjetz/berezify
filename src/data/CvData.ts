@@ -3,7 +3,7 @@ import { experiences } from "./Experiences"
 import { studies } from "./Studies"
 import { programmingLanguages } from "./ProgrammingLanguages"
 import { languages } from "./Languages"
-import { librairies } from "./Librairies"
+import { libraries } from "./Libraries"
 
 export const cvData: CvData = {
   title: {
@@ -23,7 +23,7 @@ export const cvData: CvData = {
   skills: {
     programmingLanguages: programmingLanguages,
     languages: languages,
-    librairies: librairies,
+    libraries: libraries,
     databases: [
       {
         title: {

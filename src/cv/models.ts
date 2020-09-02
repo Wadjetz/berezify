@@ -47,7 +47,7 @@ export interface CvData {
 export interface Skills {
   programmingLanguages: Skill[]
   languages: Skill[]
-  librairies: Skill[]
+  libraries: Skill[]
   databases: Skill[]
   others: Skill[]
 }
