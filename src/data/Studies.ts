@@ -5,12 +5,16 @@ export const studies: Study[] = [
     startDate: "2013",
     endDate: "2016",
     studyTitle: {
-      fr: "Master's degree in Computer Science, Software Architect",
-      en: "Master's degree in Computer Science, Software Architect"
+      fr: "Master en architecture logicielle",
+      en: "Master's degree in Software Architecture"
     },
     studyName: {
-      fr: "ESGI - Ecole supérieure de génie informatique - Réseau GES",
-      en: "ESGI - Ecole supérieure de génie informatique - Réseau GES"
+      fr: "ESGI",
+      en: "ESGI"
+    },
+    description: {
+      fr: `Conceptes avancé de la programmation, gestion des projets, architecture, réseau, Linux, Mobile, Web et les basses des données`,
+      en: `Advanced programming, project management, architecture, network, Linux, Mobile, Web and data base concepts`
     },
     place: "Paris, France"
   },
@@ -27,8 +31,8 @@ export const studies: Study[] = [
     },
     place: "Puteaux",
     description: {
-      fr: `Les bases de la programmation en C/C++, Java, PHP, Javascript, HTML, CSS, les basses des données MySql, Reseaux et Linux`,
-      en: `Programming fondamantals`
+      fr: `Les bases de la programmation, réseau, Linux et les basses des données`,
+      en: `The basics of programming, networking, Linux and data bases`
     }
   }
 ]

@@ -44,7 +44,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     borderRadius: 3,
 
     "@media screen and (min-width: 1000px)": {
-      gridTemplateColumns: "400px auto auto auto",
+      gridTemplateColumns: "350px auto auto auto",
       gridTemplateAreas: `
         "header header header header"
         "sidebar article article article"

@@ -19,12 +19,6 @@ export function SideBar({ data, phone }: Props) {
   return (
     <aside className={css(styles.aside)}>
       <Contact phone={phone} person={data.person} />
-      <section>
-        <SectionTitle title={message("stydiesTitle")} />
-        {data.studies.map(study => (
-          <StudySection key={intl(study.studyName)} study={study} />
-        ))}
-      </section>
       <section className={css(styles.skills)}>
         <SectionTitle title={message("skillsTitle")} />
         {data.skills.programmingLanguages
@@ -33,6 +27,12 @@ export function SideBar({ data, phone }: Props) {
           .map(skill => (
             <SkillItem key={intl(skill.title)} skill={skill} />
           ))}
+      </section>
+      <section>
+        <SectionTitle title={message("stydiesTitle")} />
+        {data.studies.map(study => (
+          <StudySection key={intl(study.studyName)} study={study} />
+        ))}
       </section>
     </aside>
   )

@@ -48,3 +48,7 @@ export const iOS: Technology = {
   name: "iOS",
   icon: "DiApple"
 }
+export const circleCI: Technology = {
+  name: "CircleCI",
+  icon: "DiApple"
+}

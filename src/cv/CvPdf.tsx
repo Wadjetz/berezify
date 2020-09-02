@@ -36,7 +36,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
   cv: {
     backgroundColor: "#ffffff",
     display: "grid",
-    gridTemplateColumns: "400px auto auto auto",
+    gridTemplateColumns: "350px auto auto auto",
     gridTemplateRows: "auto",
     gridTemplateAreas: `
       "header header header header"
