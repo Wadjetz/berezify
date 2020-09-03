@@ -25,7 +25,7 @@ export interface Experience {
 
 export interface Technology {
   name: string
-  icon: string
+  icon?: string
 }
 
 export interface Study {
