@@ -7,7 +7,7 @@ import { libraries } from "./Libraries"
 
 export const cvData: CvData = {
   title: {
-    fr: "Freelance Full Stack Developer",
+    fr: "Développeur Full Stack en Freelance",
     en: "Freelance Full Stack Developer"
   },
   person: {
@@ -64,6 +64,18 @@ export const cvData: CvData = {
         description: {
           fr: "Scrum et Kanban",
           en: "Scrum and Kanban"
+        }
+      },
+      {
+        title: {
+          fr: "CircleCI",
+          en: "CircleCI"
+        }
+      },
+      {
+        title: {
+          fr: "GitHub Actions",
+          en: "GitHub Actions"
         }
       },
       {
