@@ -25,4 +25,17 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
-          script: whoami
+          script: |
+            whoami
+            cat > docker-compose.yml << EOF
+            version: '3'
+            services:
+                readable:
+                    image: wadjetz/berezify:${{ env.RELEASE_VERSION }}
+                    container_name: berezify
+                    ports:
+                        - 4000:8800
+            EOF
+            docker-compose down
+            docker-compose up -d
+
