@@ -1,8 +1,8 @@
 name: Publish Docker image
 
-on: [push]
-  # release:
-  #   types: [published]
+on:
+  release:
+    types: [published]
 
 jobs:
   push_to_registry:
@@ -11,18 +11,13 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      # - name: Push to Docker Hub
-      #   uses: docker/build-push-action@v1
-      #   with:
-      #     username: ${{ secrets.DOCKER_USERNAME }}
-      #     password: ${{ secrets.DOCKER_PASSWORD }}
-      #     repository: wadjetz/berezify
-      #     tag_with_ref: true
-      - name: debug GITHUB_REF
-        run: |
-          echo $GITHUB_REF
-      - name: debug RELEASE_VERSION
-        run: echo $RELEASE_VERSION
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: wadjetz/berezify
+          tag_with_ref: true
       - name: Deploy to server with SSH
         uses: appleboy/ssh-action@master
         with:
@@ -31,18 +26,16 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo ${{env.GITHUB_REF}}
-            echo ${{env.RELEASE_VERSION}}
             cd docker-berezify
             cat > docker-compose.yml << EOF
             version: '3'
             services:
                 readable:
-                    image: wadjetz/berezify:${{ env.GITHUB_REF }}
+                    image: wadjetz/berezify:latest
                     container_name: berezify
                     ports:
                         - 4000:8800
             EOF
-            #docker-compose down
-            #docker-compose up -d
-
+            docker-compose down
+            docker-compose pull
+            docker-compose up -d
