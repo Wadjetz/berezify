@@ -1,8 +1,8 @@
 name: Publish Docker image
 
-on:
-  release:
-    types: [published]
+on: [push]
+  # release:
+  #   types: [published]
 
 jobs:
   push_to_registry:
@@ -31,7 +31,7 @@ jobs:
             version: '3'
             services:
                 readable:
-                    image: wadjetz/berezify:${{ env.GITHUB_REF:10 }}
+                    image: wadjetz/berezify:${{ env.GITHUB_REF }}
                     container_name: berezify
                     ports:
                         - 4000:8800
