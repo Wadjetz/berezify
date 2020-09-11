@@ -1,8 +1,8 @@
 name: Publish Docker image
 
-on: [push]
-  # release:
-  #   types: [published]
+on:
+  release:
+    types: [published]
 
 jobs:
   push_to_registry:
@@ -26,17 +26,16 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo $GITHUB_REF
             cd docker-berezify
             cat > docker-compose.yml << EOF
             version: '3'
             services:
                 readable:
-                    image: wadjetz/berezify:${{ env.GITHUB_REF }}
+                    image: wadjetz/berezify:latest
                     container_name: berezify
                     ports:
                         - 4000:8800
             EOF
             docker-compose down
+            docker-compose pull
             docker-compose up -d
-
