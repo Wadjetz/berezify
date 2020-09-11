@@ -19,9 +19,7 @@ jobs:
       #     repository: wadjetz/berezify
       #     tag_with_ref: true
       - name: debug
-        run: |
-          echo ${{env.GITHUB_REF}}
-          echo ${{env.RELEASE_VERSION}}
+        run: echo $GITHUB_REF
       - name: Deploy to server with SSH
         uses: appleboy/ssh-action@master
         with:
