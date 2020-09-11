@@ -11,13 +11,13 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v1
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: wadjetz/berezify
-          tag_with_ref: true
+      # - name: Push to Docker Hub
+      #   uses: docker/build-push-action@v1
+      #   with:
+      #     username: ${{ secrets.DOCKER_USERNAME }}
+      #     password: ${{ secrets.DOCKER_PASSWORD }}
+      #     repository: wadjetz/berezify
+      #     tag_with_ref: true
       - name: Deploy to server with SSH
         uses: appleboy/ssh-action@master
         with:
@@ -26,7 +26,8 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo $GITHUB_REF
+            echo ${GITHUB_REF}
+            echo ${RELEASE_VERSION}
             cd docker-berezify
             cat > docker-compose.yml << EOF
             version: '3'
