@@ -18,8 +18,11 @@ jobs:
       #     password: ${{ secrets.DOCKER_PASSWORD }}
       #     repository: wadjetz/berezify
       #     tag_with_ref: true
-      - name: debug
-        run: echo $GITHUB_REF
+      - name: debug GITHUB_REF
+        run: |
+          echo $GITHUB_REF
+      - name: debug RELEASE_VERSION
+        run: echo $RELEASE_VERSION
       - name: Deploy to server with SSH
         uses: appleboy/ssh-action@master
         with:
