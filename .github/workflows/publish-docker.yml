@@ -26,12 +26,12 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            whoami
+            cd docker-berezify
             cat > docker-compose.yml << EOF
             version: '3'
             services:
                 readable:
-                    image: wadjetz/berezify:${{ env.RELEASE_VERSION }}
+                    image: wadjetz/berezify:${{ env.GITHUB_REF:10 }}
                     container_name: berezify
                     ports:
                         - 4000:8800
