@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo ${{ env.GITHUB_REF }}
+            echo $GITHUB_REF
             cd docker-berezify
             cat > docker-compose.yml << EOF
             version: '3'
