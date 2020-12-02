@@ -15,6 +15,26 @@ import {
   circleCI
 } from "./Technologies"
 
+const squirel: Experience = {
+  company: "Squirel",
+  place: "Paris (Remote)",
+  startDate: new Date(2020, 8, 1),
+  freelance: true,
+  title: {
+    fr: "Développeur React-Native",
+    en: "React-Native Developer"
+  },
+  description: {
+    fr: `
+Développement de l'application mobile et du site web www.ouigo.com
+      `,
+    en: `
+Development of the mobile application and the website www.ouigo.com
+      `
+  },
+  technologies: [typescript, react, reactNative, redux, iOS]
+}
+
 const zeenea: Experience = {
   company: "Zeenea",
   place: "Paris (Remote)",
@@ -143,4 +163,4 @@ who does not hesitate to use new technologies and who created Play Framework.
   technologies: [scala, playFramework, typescript, react, reactNative, redux]
 }
 
-export const experiences: Experience[] = [zeenea, ditto, reachFive, zengularity]
+export const experiences: Experience[] = [squirel, zeenea, ditto, reachFive, zengularity]

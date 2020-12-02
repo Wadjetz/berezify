@@ -22,13 +22,13 @@ export function ExperienceSection({ experience }: Props) {
       <div className={css(styles.infos)}>
         <div className={css(styles.company)}>{experience.company}</div>
         <div className={css(styles.dates)}>
-          {format(experience.startDate, "MMMM yyyy", { locale })} -{" "}
-          {experience.endDate ? format(experience.endDate, "MMMM yyyy", { locale }) : undefined}
+          {format(experience.startDate, "MMMM yyyy", { locale })}
+          {experience.endDate ? ' - ' + format(experience.endDate, "MMMM yyyy", { locale }) : undefined}
         </div>
       </div>
       <div
         className={css(styles.description)}
-        dangerouslySetInnerHTML={{ __html: MarkdownIt().render(intl(experience.description)) }}
+        dangerouslySetInnerHTML={{ __html: MarkdownIt({ linkify: true }).render(intl(experience.description)) }}
       />
       <ul className={css(styles.technologies)}>
         {experience.technologies.map(({ name }) => (
@@ -43,29 +43,28 @@ export function ExperienceSection({ experience }: Props) {
 
 const styles = StyleSheet.create<Record<string, CSSProperties>>({
   container: {
-    paddingBottom: 30
+    paddingBottom: 25
   },
   title: {
     fontSize: "1.1rem",
     fontWeight: "bold",
-    paddingBottom: 5
+    paddingBottom: 3
   },
   infos: {
-    paddingBottom: 5,
+    paddingBottom: 3,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between"
   },
   company: {
-    fontSize: "1.1rem",
+    fontSize: "1rem",
     color: "#3d7ad9"
   },
   dates: {
-    fontSize: "1rem"
+    fontSize: "0.9rem"
   },
   description: {
     fontSize: "0.9rem",
-    paddingBottom: 5
   },
   technologies: {
     display: "flex",
@@ -75,6 +74,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     margin: 0
   },
   technology: {
+    fontSize: "0.87rem",
     padding: 4,
     marginRight: 5,
     borderRadius: 3,

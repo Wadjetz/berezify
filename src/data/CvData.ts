@@ -13,7 +13,7 @@ export const cvData: CvData = {
   person: {
     firstName: "Egor",
     lastName: "Berezovskiy",
-    email: "egor@berezify.fr",
+    email: "ebe@berezify.fr",
     twitter: "@wadjetz",
     linkedin: "egor-berezovskiy",
     github: "wadjetz",
