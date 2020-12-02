@@ -23,7 +23,7 @@ export function ExperienceSection({ experience }: Props) {
         <div className={css(styles.company)}>{experience.company}</div>
         <div className={css(styles.dates)}>
           {format(experience.startDate, "MMMM yyyy", { locale })}
-          {experience.endDate ? ' - ' + format(experience.endDate, "MMMM yyyy", { locale }) : undefined}
+          {experience.endDate ? " - " + format(experience.endDate, "MMMM yyyy", { locale }) : undefined}
         </div>
       </div>
       <div
@@ -64,7 +64,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     fontSize: "0.9rem"
   },
   description: {
-    fontSize: "0.9rem",
+    fontSize: "0.9rem"
   },
   technologies: {
     display: "flex",
