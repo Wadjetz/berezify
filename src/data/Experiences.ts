@@ -26,10 +26,10 @@ const squirel: Experience = {
   },
   description: {
     fr: `
-Développement de l'application mobile et du site web www.ouigo.com
+Développement des nouvelles fonctionnalités de l'application mobile et du site web www.ouigo.com
       `,
     en: `
-Development of the mobile application and the website www.ouigo.com
+Development of new features for the mobile application and the website www.ouigo.com 
       `
   },
   technologies: [typescript, react, reactNative, redux, iOS]
@@ -160,7 +160,7 @@ who does not hesitate to use new technologies and who created Play Framework.
 
     `
   },
-  technologies: [scala, playFramework, typescript, react, reactNative, redux]
+  technologies: [scala, playFramework, typescript, react, reactNative, redux, postgreSql]
 }
 
 export const experiences: Experience[] = [squirel, zeenea, ditto, reachFive, zengularity]
