@@ -31,7 +31,7 @@ export const studies: Study[] = [
     },
     place: "Puteaux",
     description: {
-      fr: `Les bases de la programmation, réseau, Linux et les basses des données`,
+      fr: `Les bases de la programmation, réseau, Linux et les bases des données`,
       en: `The basics of programming, networking, Linux and data bases`
     }
   }
