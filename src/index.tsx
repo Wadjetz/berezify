@@ -8,25 +8,25 @@ import { cvData } from "./data/CvData"
 import { renderTemplate } from "./template/indexTemplate"
 import { generatePDF } from "./pdf"
 import { Lang } from "./intl/Intl"
-import { CvData } from "./cv/models"
 
 const app = express()
 
-function template(lang: Lang, data: CvData, phone?: string, isPdf: boolean = false) {
+function template(lang: Lang, phone?: string, isPdf: boolean = false, anonymous: boolean = false) {
   const { html, css } = StyleSheetServer.renderStatic(() =>
-    ReactDOMServer.renderToString(<App lang={lang} data={cvData} isPdf={isPdf} phone={phone} />)
+    ReactDOMServer.renderToString(<App anonymous={anonymous} lang={lang} data={cvData} isPdf={isPdf} phone={phone} />)
   )
   return renderTemplate("Berezify", html, css.content)
 }
 
-app.get("/", (_, res) => res.send(template("fr", cvData)))
-app.get("/cv/fr", (_, res) => res.send(template("fr", cvData)))
-app.get("/cv/en", (_, res) => res.send(template("en", cvData)))
+app.get("/", (_, res) => res.send(template("fr")))
+app.get("/cv/fr", (_, res) => res.send(template("fr")))
+app.get("/cv/en", (_, res) => res.send(template("en")))
 
 app.get("/cv/pdf", async (req, res) => {
   const lang = (req.query["lang"] as Lang) ?? "fr"
   const phone = req.query["phone"] as string | undefined
-  const pdf = await generatePDF(template(lang, cvData, phone, true))
+  const anonymous = !req.query["anonymous"]
+  const pdf = await generatePDF(template(lang, phone, true, anonymous))
   res.set({
     "Content-Type": "application/pdf",
     "Content-Length": pdf.length,

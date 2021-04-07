@@ -19,6 +19,7 @@ const squirel: Experience = {
   company: "Squirel",
   place: "Paris (Remote)",
   startDate: new Date(2020, 8, 1),
+  endDate: new Date(2021, 2, 1),
   freelance: true,
   title: {
     fr: "Développeur React-Native",
@@ -32,7 +33,7 @@ Développement des nouvelles fonctionnalités de l'application mobile et du site
 Development of new features for the mobile application and the website www.ouigo.com 
       `
   },
-  technologies: [typescript, react, reactNative, redux, iOS]
+  technologies: [reactNative, typescript, redux, react, iOS, android]
 }
 
 const zeenea: Experience = {

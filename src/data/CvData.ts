@@ -48,6 +48,12 @@ export const cvData: CvData = {
     others: [
       {
         title: {
+          fr: "AWS",
+          en: "AWS"
+        }
+      },
+      {
+        title: {
           fr: "Réseau",
           en: "Network"
         },

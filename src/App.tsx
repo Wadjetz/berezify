@@ -11,12 +11,13 @@ interface Props {
   isPdf: boolean
   phone?: string
   data: CvData
+  anonymous: boolean
 }
 
-export function App({ lang, phone, isPdf, data }: React.PropsWithChildren<Props>) {
+export function App({ lang, phone, isPdf, data, anonymous }: React.PropsWithChildren<Props>) {
   return (
     <IntlContext.Provider value={{ ...initIntlState, lang }}>
-      {isPdf ? <CvPdf phone={phone} data={data} /> : <Cv data={data} />}
+      {isPdf ? <CvPdf anonymous={anonymous} phone={phone} data={data} /> : <Cv anonymous={anonymous} data={data} />}
     </IntlContext.Provider>
   )
 }

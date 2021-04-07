@@ -8,20 +8,16 @@ import { Content } from "./Content"
 
 interface Props {
   data: CvData
+  anonymous: boolean
 }
 
-export function Cv({ data }: Props) {
+export function Cv({ data, anonymous }: Props) {
   const intl = useIntl()
   return (
     <div className={css(styles.container)}>
       <main className={css(styles.cv)}>
-        <Header
-          showPdfDownload
-          title={intl(data.title)}
-          name={`${data.person.firstName} ${data.person.lastName}`}
-          description={intl(data.person.description)}
-        />
-        <SideBar data={data} />
+        <Header showPdfDownload title={intl(data.title)} description={intl(data.person.description)} />
+        <SideBar data={data} anonymous={anonymous} />
         <Content data={data} />
       </main>
     </div>
