@@ -10,6 +10,7 @@ import { SectionTitle } from "./SectionTitle"
 interface Props {
   phone?: string
   data: CvData
+  anonymous: boolean
 }
 
 function SkillSection({ title, skills }: { title: string; skills: Skill[] }) {
@@ -24,13 +25,13 @@ function SkillSection({ title, skills }: { title: string; skills: Skill[] }) {
   )
 }
 
-export function SideBar({ data, phone }: Props) {
+export function SideBar({ data, phone, anonymous }: Props) {
   const message = useMesages()
   const intl = useIntl()
 
   return (
     <aside className={css(styles.aside)}>
-      <Contact phone={phone} person={data.person} />
+      {!anonymous ? <Contact phone={phone} person={data.person} /> : undefined}
       <section className={css(styles.skills)}>
         <SectionTitle title={message("skillsTitle")} />
         <SkillSection title={message("programmingLanguagesTitle")} skills={data.skills.programmingLanguages} />

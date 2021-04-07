@@ -9,20 +9,16 @@ import { Content } from "./Content"
 interface Props {
   data: CvData
   phone?: string
+  anonymous: boolean
 }
 
-export function CvPdf({ data, phone }: Props) {
+export function CvPdf({ data, phone, anonymous }: Props) {
   const intl = useIntl()
   return (
     <div className={css(styles.container)}>
       <main className={css(styles.cv)}>
-        <Header
-          showPdfDownload={false}
-          title={intl(data.title)}
-          description={intl(data.person.description)}
-          name={`${data.person.firstName} ${data.person.lastName}`}
-        />
-        <SideBar phone={phone} data={data} />
+        <Header showPdfDownload={false} title={intl(data.title)} description={intl(data.person.description)} />
+        <SideBar phone={phone} data={data} anonymous={anonymous} />
         <Content data={data} />
       </main>
     </div>

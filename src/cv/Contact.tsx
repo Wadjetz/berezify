@@ -17,12 +17,15 @@ interface Props {
   phone?: string
 }
 
-export function Contact({ phone, person: { email, twitter, linkedin, github, website } }: Props) {
+export function Contact({ phone, person: { firstName, lastName, email, twitter, linkedin, github, website } }: Props) {
   const message = useMesages()
 
   return (
     <section className={css(styles.contact)}>
       <SectionTitle title={message("contactTitle")} />
+      <div className={css(styles.item)}>
+        <h2 className={css(styles.name)}>{`${firstName} ${lastName}`}</h2>
+      </div>
       <div className={css(styles.item)}>
         <AiOutlineMail size="20" color="#3d7ad9" />
         <a href={`mailto:${email}`} className={css(styles.itemLink)}>
@@ -87,5 +90,9 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 10
+  },
+  name: {
+    fontSize: "1.1rem",
+    fontWeight: "bold"
   }
 })

@@ -3,18 +3,6 @@ import { Skill } from "src/cv/models"
 export const libraries: Skill[] = [
   {
     title: {
-      fr: "Play Framework",
-      en: "Play Framework"
-    }
-  },
-  {
-    title: {
-      fr: "Akka / Akka Stream",
-      en: "Akka / Akka Stream"
-    }
-  },
-  {
-    title: {
       fr: "React",
       en: "React"
     }
@@ -35,6 +23,18 @@ export const libraries: Skill[] = [
     title: {
       fr: "Svelte.js",
       en: "Svelte.js"
+    }
+  },
+  {
+    title: {
+      fr: "Play Framework",
+      en: "Play Framework"
+    }
+  },
+  {
+    title: {
+      fr: "Akka / Akka Stream",
+      en: "Akka / Akka Stream"
     }
   }
 ]
