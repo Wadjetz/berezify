@@ -13,7 +13,7 @@ export const studies: Study[] = [
       en: "ESGI"
     },
     description: {
-      fr: `Conceptes avancé de la programmation, gestion des projets, architecture, réseau, Linux, Mobile, Web et les basses des données`,
+      fr: `Conceptes avancé de la programmation, gestion des projets, architecture, réseau, Linux, Mobile, Web et les bases des données`,
       en: `Advanced programming, project management, architecture, network, Linux, Mobile, Web and data base concepts`
     },
     place: "Paris, France"
