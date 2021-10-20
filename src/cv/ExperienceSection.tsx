@@ -43,15 +43,15 @@ export function ExperienceSection({ experience }: Props) {
 
 const styles = StyleSheet.create<Record<string, CSSProperties>>({
   container: {
-    paddingBottom: 25
+    paddingBottom: 20
   },
   title: {
     fontSize: "1.1rem",
     fontWeight: "bold",
-    paddingBottom: 3
+    paddingBottom: 2
   },
   infos: {
-    paddingBottom: 3,
+    paddingBottom: 2,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between"
@@ -64,7 +64,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     fontSize: "0.9rem"
   },
   description: {
-    fontSize: "0.9rem"
+    fontSize: "0.85rem"
   },
   technologies: {
     display: "flex",
@@ -74,8 +74,8 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     margin: 0
   },
   technology: {
-    fontSize: "0.87rem",
-    padding: 4,
+    fontSize: "0.7rem",
+    padding: 3,
     marginRight: 5,
     borderRadius: 3,
     backgroundColor: "#eeeeee"

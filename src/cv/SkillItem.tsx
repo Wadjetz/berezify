@@ -23,7 +23,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     marginBottom: 15
   },
   title: {
-    padding: 4,
+    padding: 3,
     borderRadius: 3,
     backgroundColor: "#eeeeee"
   }

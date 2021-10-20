@@ -15,6 +15,26 @@ import {
   circleCI
 } from "./Technologies"
 
+const treezor: Experience = {
+  company: "Treezor",
+  place: "Paris (Remote)",
+  startDate: new Date(2021, 3, 1),
+  freelance: true,
+  title: {
+    fr: "Développeur React-Native",
+    en: "React-Native Developer"
+  },
+  description: {
+    fr: `
+Développement des librairies de composants pour les applications bancaires
+      `,
+    en: `
+Development of component libraries for banking applications 
+      `
+  },
+  technologies: [reactNative, typescript, react, iOS, android]
+}
+
 const squirel: Experience = {
   company: "Squirel",
   place: "Paris (Remote)",
@@ -164,4 +184,4 @@ who does not hesitate to use new technologies and who created Play Framework.
   technologies: [scala, playFramework, typescript, react, reactNative, redux, postgreSql]
 }
 
-export const experiences: Experience[] = [squirel, zeenea, ditto, reachFive, zengularity]
+export const experiences: Experience[] = [treezor, squirel, zeenea, ditto, reachFive, zengularity]
