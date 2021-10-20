@@ -86,6 +86,12 @@ export const cvData: CvData = {
       },
       {
         title: {
+          fr: "AWS Codebuild",
+          en: "AWS Codebuild"
+        }
+      },
+      {
+        title: {
           fr: "Programmation fonctionnelle",
           en: "Functional programming"
         }

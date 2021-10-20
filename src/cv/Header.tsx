@@ -49,7 +49,7 @@ const styles = StyleSheet.create<Record<string, CSSProperties>>({
     flexDirection: "row",
     justifyContent: "space-between",
     flexWrap: "wrap",
-    padding: 30,
+    padding: 20,
     backgroundColor: "#3d7ad9",
     color: "#ffffff"
   },
