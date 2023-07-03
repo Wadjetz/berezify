@@ -12,8 +12,30 @@ import {
   reactNative,
   playFramework,
   redux,
-  circleCI
+  circleCI,
+  firebase,
+  githubActions
 } from "./Technologies"
+
+const louve: Experience = {
+  company: "Louve Invest",
+  place: "Paris (Remote)",
+  startDate: new Date(2022, 1, 1),
+  freelance: true,
+  title: {
+    fr: "Développeur React et React-Native",
+    en: "React et React-native developer"
+  },
+  description: {
+    fr: `
+Développement du produit Louve Invest
+      `,
+    en: `
+Development of Louve Invest product 
+      `
+  },
+  technologies: [reactNative, typescript, react, firebase, githubActions]
+}
 
 const treezor: Experience = {
   company: "Treezor",
@@ -119,19 +141,12 @@ const reachFive: Experience = {
   description: {
     fr: `
 Reachfive est une startup de gestion d'utilisateurs et d'authentification
-
-- Implémentation du PKCE, une extension de la norme OAuth qui permet de sécuriser les applications mobiles
-- Développement du SDK mobile en native pour Android et iOS en Kotlin et Swift
-- Mise en place de l'intégration continue avec CircleCI
-- Refactiring du code, clean code et conception des nouvelles fonctionnalités
+- Développement du SDK mobile en native pour Android et iOS en Kotlin et Swift, Implémentation du PKCE
 - Développement des nouvelles fonctionnalités côté back et front
 `,
     en: `
 Reachfive is a user management and authentication startup
-- Implementation of the PKCE, an extension of the OAuth standard which allows to secure mobile applications
-- Development of the native mobile SDK for Android and iOS in Kotlin and Swift
-- Implementation of continuous integration with CircleCI
-- Code refactiring, clean code and design of new features
+- Development of the native mobile SDK for Android and iOS in Kotlin and Swift, Implementation of the PKCE
 - Development of new features on the back-end and front-end
     `
   },
@@ -150,38 +165,21 @@ const zengularity: Experience = {
   },
   description: {
     fr: `
-Zengularity est une entreprise de services spécialisé dans la transformation numérique,
-qui n'hésite pas à utiliser les nouvelles technologies et qui avait créé Play Framework.
+Zengularity est une entreprise de services spécialisé dans la transformation numérique
 
-- NestinCloud: est une plateforme de cloud qui permet de déployer et gérer facilement des applications.
-  La plateforme utilise des conteneurs, supporte des bases des données et l'auto scaling
-
-- Nomad Mobile: Développement d'une application mobile en React Native qui permet d'effectuer des missions de dépannage routier en liaison avec des assureurs.
-  le dépanneur dispose de toutes les informations nécessaires pour effectuer pour le dépannage.
-  La géolocalisation et la détection automatique des étapes de la mission permettent une utilisation minimale de l'application au volant.
-  Le support du mode hors-ligne et une perte fréquente de la connexion
-
-- GroupeUP: Développement d'une application mobile en React Native qui permet de gérer ses cartes de ticket restaurant.
-  La visualisation des montants et des transactions avec des animations pour une meilleure expérience utilisateur
+- NestinCloud: est une plateforme de cloud
+- Nomad Mobile: Développement d'une application mobile en React Native qui permet d'effectuer des missions de dépannage routier.
+- GroupeUP: Développement d'une application mobile en React Native de tickets restaurant.
     `,
     en: `
-Zengularity is a service company specializing in digital transformation,
-who does not hesitate to use new technologies and who created Play Framework.
+Zengularity is a service company specializing in digital transformation
 
-- NestinCloud: is a cloud platform that allows you to easily deploy and manage applications.
-  The platform uses containers, supports databases and auto scaling
-
-- Nomad Mobile: Development of a mobile application in React Native which makes it possible to carry out roadside assistance missions in conjunction with insurers.
-  the troubleshooter has all the information needed to perform troubleshooting.
-  Geolocation and automatic detection of mission steps allow minimal use of the application while driving.
-  Support for offline mode and frequent loss of connection
-
+- NestinCloud: is a cloud platform
+- Nomad Mobile: Development of a mobile application in React Native which makes it possible to carry out roadside assistance missions.
 - GroupeUP: Development of a mobile application in React Native which allows you to manage your restaurant ticket cards.
-  Visualization of amounts and transactions with animations for a better user experience
-
     `
   },
   technologies: [scala, playFramework, typescript, react, reactNative, redux, postgreSql]
 }
 
-export const experiences: Experience[] = [treezor, squirel, zeenea, ditto, reachFive, zengularity]
+export const experiences: Experience[] = [louve, treezor, squirel, zeenea, ditto, reachFive, zengularity]
