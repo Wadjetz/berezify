@@ -52,3 +52,11 @@ export const circleCI: Technology = {
   name: "CircleCI",
   icon: "DiApple"
 }
+export const firebase: Technology = {
+  name: "Firebase",
+  icon: "DiApple"
+}
+export const githubActions: Technology = {
+  name: "Github Actions",
+  icon: "DiApple"
+}
