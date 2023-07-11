@@ -53,7 +53,7 @@ jobs:
                     image: wadjetz/berezify:latest
                     container_name: berezify
                     ports:
-                        - 4000:8800
+                        - 4000:3000
             EOF
             docker-compose down
             docker-compose pull

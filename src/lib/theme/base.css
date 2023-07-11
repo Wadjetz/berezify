@@ -1,0 +1,33 @@
+@import "@fontsource/open-sans";
+
+:root {
+  --font-mono: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--font-mono);
+
+  /** 4px */
+  --s1: 0.25rem;
+  /** 8px */
+  --s2: 0.5rem;
+  /** 16px */
+  --s3: 1rem;
+  /** 24px */
+  --s4: 1.5rem;
+  /** 32px */
+  --s5: 2rem;
+  /** 40px */
+  --s6: 2.5rem;
+  /** 64px */
+  --s7: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}

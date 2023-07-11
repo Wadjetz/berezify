@@ -1,0 +1,33 @@
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: var(--s3);
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: var(--s1);
+  color: #3d7ad9;
+  border-bottom-color: #3d7ad9;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: var(--s1);
+}
+
+h4 {
+  font-size: 0.9rem;
+  color: #3d7ad9;
+  margin-top: 0;
+  margin-bottom: var(--s1);
+}
