@@ -13,13 +13,13 @@ export const handle = (async ({ event, resolve }) => {
   event.locals.locale = locale
   event.locals.LL = LL
 
-  if (event.url.pathname === "/cv/en") {
+  if (event.url.pathname.startsWith("/cv/en")) {
     const LL = L["en"]
     event.locals.LL = LL
     event.locals.locale = "en"
-  } else {
-    const LL = L[locale]
-    event.locals.locale = locale
+  } else if (event.url.pathname.startsWith("/cv/fr")) {
+    const LL = L["fr"]
+    event.locals.locale = "fr"
     event.locals.LL = LL
   }
 
