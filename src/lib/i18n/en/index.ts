@@ -1,6 +1,24 @@
 import type { BaseTranslation } from "../i18n-types"
 
 const en = {
+  portfolio: {
+    name: "Egor Berezovskiy",
+    nav: {
+      cv: "CV",
+      home: "Home"
+    },
+    home: {
+      hello: "Hello,",
+      iam: "I am a full stack developer",
+      description:
+        "passionate and curious developer, constantly on the lookout for the latest technological trends. I like to spend time on technological watch, exploring new technologies and discovering innovative solutions to solve complex problems"
+    },
+    skills: {
+      programmingLanguages: "My favorite programming languages",
+      frameworks: "My favorite frameworks",
+      databases: "My favorite databases"
+    }
+  },
   cv: {
     title: "CV - Full Stack Developer"
   },

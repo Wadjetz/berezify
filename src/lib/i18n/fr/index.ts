@@ -1,6 +1,24 @@
 import type { Translation } from "../i18n-types"
 
 const fr = {
+  portfolio: {
+    name: "Egor Berezovskiy",
+    nav: {
+      cv: "CV",
+      home: "Accueil"
+    },
+    home: {
+      hello: "Bonjour,",
+      iam: "Je suis un developpeur full stack",
+      description:
+        "passionné et curieux, constamment à l'affût des dernières tendances technologiques. J'aime consacrer du temps à la veille technologique, explorant de nouvelles technologies et découvrant des solutions innovantes pour résoudre des problèmes complexes"
+    },
+    skills: {
+      programmingLanguages: "Mes langages de programmation préférés",
+      frameworks: "Mes frameworks préférés",
+      databases: "Mes bases de données préférées"
+    }
+  },
   cv: {
     title: "CV - Développeur full stack"
   },

@@ -14,6 +14,50 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	portfolio: {
+		/**
+		 * E​g​o​r​ ​B​e​r​e​z​o​v​s​k​i​y
+		 */
+		name: string
+		nav: {
+			/**
+			 * C​V
+			 */
+			cv: string
+			/**
+			 * H​o​m​e
+			 */
+			home: string
+		}
+		home: {
+			/**
+			 * H​e​l​l​o​,
+			 */
+			hello: string
+			/**
+			 * I​ ​a​m​ ​a​ ​f​u​l​l​ ​s​t​a​c​k​ ​d​e​v​e​l​o​p​e​r
+			 */
+			iam: string
+			/**
+			 * p​a​s​s​i​o​n​a​t​e​ ​a​n​d​ ​c​u​r​i​o​u​s​ ​d​e​v​e​l​o​p​e​r​,​ ​c​o​n​s​t​a​n​t​l​y​ ​o​n​ ​t​h​e​ ​l​o​o​k​o​u​t​ ​f​o​r​ ​t​h​e​ ​l​a​t​e​s​t​ ​t​e​c​h​n​o​l​o​g​i​c​a​l​ ​t​r​e​n​d​s​.​ ​I​ ​l​i​k​e​ ​t​o​ ​s​p​e​n​d​ ​t​i​m​e​ ​o​n​ ​t​e​c​h​n​o​l​o​g​i​c​a​l​ ​w​a​t​c​h​,​ ​e​x​p​l​o​r​i​n​g​ ​n​e​w​ ​t​e​c​h​n​o​l​o​g​i​e​s​ ​a​n​d​ ​d​i​s​c​o​v​e​r​i​n​g​ ​i​n​n​o​v​a​t​i​v​e​ ​s​o​l​u​t​i​o​n​s​ ​t​o​ ​s​o​l​v​e​ ​c​o​m​p​l​e​x​ ​p​r​o​b​l​e​m​s
+			 */
+			description: string
+		}
+		skills: {
+			/**
+			 * M​y​ ​f​a​v​o​r​i​t​e​ ​p​r​o​g​r​a​m​m​i​n​g​ ​l​a​n​g​u​a​g​e​s
+			 */
+			programmingLanguages: string
+			/**
+			 * M​y​ ​f​a​v​o​r​i​t​e​ ​f​r​a​m​e​w​o​r​k​s
+			 */
+			frameworks: string
+			/**
+			 * M​y​ ​f​a​v​o​r​i​t​e​ ​d​a​t​a​b​a​s​e​s
+			 */
+			databases: string
+		}
+	}
 	cv: {
 		/**
 		 * C​V​ ​-​ ​F​u​l​l​ ​S​t​a​c​k​ ​D​e​v​e​l​o​p​e​r
@@ -227,6 +271,50 @@ type RootTranslation = {
 }
 
 export type TranslationFunctions = {
+	portfolio: {
+		/**
+		 * Egor Berezovskiy
+		 */
+		name: () => LocalizedString
+		nav: {
+			/**
+			 * CV
+			 */
+			cv: () => LocalizedString
+			/**
+			 * Home
+			 */
+			home: () => LocalizedString
+		}
+		home: {
+			/**
+			 * Hello,
+			 */
+			hello: () => LocalizedString
+			/**
+			 * I am a full stack developer
+			 */
+			iam: () => LocalizedString
+			/**
+			 * passionate and curious developer, constantly on the lookout for the latest technological trends. I like to spend time on technological watch, exploring new technologies and discovering innovative solutions to solve complex problems
+			 */
+			description: () => LocalizedString
+		}
+		skills: {
+			/**
+			 * My favorite programming languages
+			 */
+			programmingLanguages: () => LocalizedString
+			/**
+			 * My favorite frameworks
+			 */
+			frameworks: () => LocalizedString
+			/**
+			 * My favorite databases
+			 */
+			databases: () => LocalizedString
+		}
+	}
 	cv: {
 		/**
 		 * CV - Full Stack Developer
