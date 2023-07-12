@@ -19,7 +19,7 @@
   {#each cvData.experiences as experience}
     <section>
       <div class="title">
-        <h3>{experience.title[locale]}</h3>
+        <h3 class="cv-h3">{experience.title[locale]}</h3>
         {#if experience.freelance}
           <div class="freelance">{$LL.freelance()}</div>
         {/if}
@@ -108,5 +108,23 @@
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: var(--s1);
+    color: var(--color1);
+    border-bottom-color: var(--color1);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    color: #3d7ad9;
+    margin-top: 0;
+    margin-bottom: var(--s1);
   }
 </style>

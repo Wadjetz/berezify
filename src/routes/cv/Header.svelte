@@ -23,4 +23,12 @@
   .description {
     font-size: 0.9rem;
   }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: var(--s3);
+  }
 </style>

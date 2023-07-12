@@ -12,7 +12,7 @@
 </script>
 
 <div class="project">
-  <h3>{project.title}</h3>
+  <h3 class="cv-h3">{project.title}</h3>
   {#if project.link}
     <a href={project.link}>{project.linkLabel}</a>
   {/if}
