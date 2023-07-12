@@ -7,6 +7,7 @@
 </script>
 
 <section>
+  <h3>{cvData.person.firstName} {cvData.person.lastName}</h3>
   <div class="item">
     <GithubIcon size="20" color="#3d7ad9" />
     <a href="https://github.com/{cvData.person.github}" class="link" target="_blank">
