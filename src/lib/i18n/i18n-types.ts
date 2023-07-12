@@ -14,6 +14,12 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	cv: {
+		/**
+		 * C​V​ ​-​ ​F​u​l​l​ ​S​t​a​c​k​ ​D​e​v​e​l​o​p​e​r
+		 */
+		title: string
+	}
 	contact: {
 		/**
 		 * C​o​n​t​a​c​t​ ​m​e
@@ -221,6 +227,12 @@ type RootTranslation = {
 }
 
 export type TranslationFunctions = {
+	cv: {
+		/**
+		 * CV - Full Stack Developer
+		 */
+		title: () => LocalizedString
+	}
 	contact: {
 		/**
 		 * Contact me

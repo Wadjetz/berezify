@@ -7,8 +7,8 @@ const louve: Experience = {
   endDate: new Date(2023, 6, 31),
   freelance: true,
   title: {
-    fr: "React développeur",
-    en: "React developer"
+    fr: "Développeur Full Stack",
+    en: "Full Stack developer"
   },
   description: {
     fr: `

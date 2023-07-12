@@ -1,6 +1,9 @@
 import type { BaseTranslation } from "../i18n-types"
 
 const en = {
+  cv: {
+    title: "CV - Full Stack Developer"
+  },
   contact: {
     title: "Contact me"
   },

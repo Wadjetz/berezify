@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { page } from "$app/stores"
+  import { cvData } from "$lib/cv/data/CvData"
+  import { LL } from "$lib/i18n/i18n-svelte"
+
   import Aside from "../Aside.svelte"
   import ExperiencesList from "../ExperiencesList.svelte"
   import Header from "../Header.svelte"
@@ -8,8 +12,19 @@
 </script>
 
 <svelte:head>
-  <title>CV</title>
-  <meta name="description" content="CV" />
+  <title>{$LL.cv.title()}</title>
+  <meta name="description" content={cvData.person.description[data.locale]} />
+
+  <meta property="og:site_name" content="Berezify" />
+  <meta property="og:title" content={$LL.cv.title()} />
+  <meta property="og:description" content={cvData.person.description[data.locale]} />
+  <meta property="og:url" content={$page.url.origin} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content={$page.url.hostname} />
+  <meta property="twitter:url" content={$page.url.origin} />
+  <meta name="twitter:title" content={$LL.cv.title()} />
+  <meta name="twitter:description" content={cvData.person.description[data.locale]} />
 </svelte:head>
 
 <Header locale={data.locale} />
