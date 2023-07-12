@@ -23,15 +23,28 @@ const louve: Experience = {
   startDate: new Date(2022, 1, 1),
   freelance: true,
   title: {
-    fr: "Développeur React et React-Native",
-    en: "React et React-native developer"
+    fr: "Développeur React",
+    en: "React developer"
   },
   description: {
     fr: `
 Développement du produit Louve Invest
+
+ - Les lambda functions de firebase
+ - CI/CD avec Github Actions
+ - Conceptions des nouvelles fonctionnalités
+ - Création d'un UI-Kit de composants réutilisables
+ - Development de l'application mobile en React Native
+ - Mise en place de monorepo avec yarn workspaces
       `,
     en: `
-Development of Louve Invest product 
+Development of Louve Invest product
+
+- Firebase lambda functions
+- CI/CD with Github Actions
+- New feature designs
+- Creation of a UI-Kit of reusable components
+- Setting up monorepo with yarn workspaces
       `
   },
   technologies: [reactNative, typescript, react, firebase, githubActions]
@@ -48,10 +61,18 @@ const treezor: Experience = {
   },
   description: {
     fr: `
-Développement des librairies de composants pour les applications bancaires
+Treezor est une neo banque as a service qui fournit des API bancaires et des composants pour les applications mobiles.
+
+- Création d'un UI-Kit et de composants réutilisables
+- Mise en place de monorepo avec yarn workspaces
+- Development de l'application mobile de démonstration en utilisants l'UI-Kit
       `,
     en: `
-Development of component libraries for banking applications 
+Treezor is a neo bank as a service that provides banking APIs and components for mobile applications.
+
+- Creation of a UI-Kit of reusable components
+- Setting up monorepo with yarn workspaces
+- Development of the demonstration mobile application using the UI-Kit
       `
   },
   technologies: [reactNative, typescript, react, iOS, android]
