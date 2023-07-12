@@ -4,6 +4,7 @@
   import type { Locales } from "$lib/i18n/i18n-types"
 
   import Contact from "./Contact.svelte"
+  import Project from "./Project.svelte"
   import SkillsList from "./SkillsList.svelte"
   import Study from "./Study.svelte"
 
@@ -18,12 +19,23 @@
   <SkillsList {locale} title={$LL.skills.libraries()} skills={cvData.skills.libraries} />
   <SkillsList {locale} title={$LL.skills.databases()} skills={cvData.skills.databases} />
   <SkillsList {locale} title={$LL.skills.others()} skills={cvData.skills.others} />
-  <h2>{$LL.stydies.title()}</h2>
-  <section class="studies">
-    {#each cvData.studies as study}
-      <Study {study} {locale} />
-    {/each}
-  </section>
+  <SkillsList {locale} title={$LL.skills.languages()} skills={cvData.skills.languages} />
+  <div class="studies-section">
+    <h2>{$LL.stydies.title()}</h2>
+    <section class="studies">
+      {#each cvData.studies as study}
+        <Study {study} {locale} />
+      {/each}
+    </section>
+  </div>
+  <div class="projects-section">
+    <h2>{$LL.projects.title()}</h2>
+    <section class="projects">
+      {#each cvData.projects as project}
+        <Project {project} {locale} />
+      {/each}
+    </section>
+  </div>
 </aside>
 
 <style>
@@ -35,7 +47,16 @@
     gap: var(--s4);
   }
 
-  .studies {
+  .studies-section,
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s4);
+    break-inside: avoid;
+  }
+
+  .studies,
+  .projects {
     display: flex;
     flex-direction: column;
     gap: var(--s3);

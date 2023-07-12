@@ -44,6 +44,7 @@ export interface CvData {
   studies: Study[]
   experiences: Experience[]
   skills: Skills
+  projects: Project[]
 }
 
 export interface Skills {
@@ -58,4 +59,12 @@ export interface Skill {
   title: IntlValue
   description?: IntlValue
   level?: number
+}
+
+export interface Project {
+  title: string
+  description?: IntlValue
+  link?: string
+  linkLabel?: string
+  technologies: Technology[]
 }

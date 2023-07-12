@@ -41,6 +41,16 @@ type RootTranslation = {
 		 * O​t​h​e​r​s
 		 */
 		others: string
+		/**
+		 * L​a​n​g​u​a​g​e​s
+		 */
+		languages: string
+	}
+	projects: {
+		/**
+		 * P​r​o​j​e​c​t​s
+		 */
+		title: string
 	}
 	stydies: {
 		/**
@@ -88,6 +98,16 @@ export type TranslationFunctions = {
 		 * Others
 		 */
 		others: () => LocalizedString
+		/**
+		 * Languages
+		 */
+		languages: () => LocalizedString
+	}
+	projects: {
+		/**
+		 * Projects
+		 */
+		title: () => LocalizedString
 	}
 	stydies: {
 		/**

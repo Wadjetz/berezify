@@ -11,5 +11,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--s4);
+    margin-bottom: var(--s5);
   }
 </style>
