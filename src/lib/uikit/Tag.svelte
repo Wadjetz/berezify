@@ -3,15 +3,19 @@
 </script>
 
 <div class="tag">
+  <slot />
   {label}
 </div>
 
 <style>
   .tag {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--s1);
     font-size: 0.7rem;
-    padding: var(--s1);
-    border-radius: 3px;
-    background-color: #eeeeee;
-    border: 1px solid #cccccc;
+    padding: 3px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--grey2);
   }
 </style>

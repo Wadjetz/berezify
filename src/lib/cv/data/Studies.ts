@@ -13,8 +13,19 @@ export const studies: Study[] = [
       en: "ESGI"
     },
     description: {
-      fr: `Conceptes avancé de la programmation, gestion des projets, architecture, réseau, Linux, Mobile, Web et les bases des données`,
-      en: `Advanced programming, project management, architecture, network, Linux, Mobile, Web and data base concepts`
+      fr: `
+- Conceptes avancé de la programmation
+- Gestion des projets
+- Architecture
+- Réseau, Linux, Mobile, Web
+- Les bases des données
+`,
+      en: `
+- Advanced programming
+- Project management
+- Architecture
+- Network, Linux, Mobile, Web
+- Data Bases`
     },
     place: "Paris, France"
   },
@@ -31,8 +42,16 @@ export const studies: Study[] = [
     },
     place: "Puteaux",
     description: {
-      fr: `Les bases de la programmation, réseau, Linux et les bases des données`,
-      en: `The basics of programming, networking, Linux and data bases`
+      fr: `
+- Les bases de la programmation
+- Réseau, Linux
+- Les bases des données
+`,
+      en: `
+- The basics of programming
+- Networking, Linux
+- Data Bases
+`
     }
   }
 ]

@@ -1,5 +1,4 @@
 import type { Project } from "../models/models"
-import { githubActions, postgreSql, rust, svelte, sveltekit, typescript } from "./Technologies"
 
 export const projects: Project[] = [
   {
@@ -7,7 +6,7 @@ export const projects: Project[] = [
     description: {
       fr: `
 Une application de recettes de cuisine
-- Creation de recettes
+- Création de recettes
 - Planification de repas
 `,
       en: `
@@ -18,7 +17,20 @@ A cooking recipes application
     },
     link: "https://brocolix.fr",
     linkLabel: "brocolix.fr",
-    technologies: [typescript, svelte, sveltekit, rust, postgreSql, githubActions]
+    technologies: [
+      "typescript",
+      "svelte",
+      "sveltekit",
+      "rust",
+      "postgreSql",
+      "githubActions",
+      "actix",
+      "meilisearch",
+      "docker",
+      "css",
+      "html",
+      "redis"
+    ]
   },
   {
     title: "Mindstream",
@@ -38,6 +50,19 @@ A cooking recipes application
     },
     link: "https://mindstream.berezify.fr",
     linkLabel: "mindstream.berezify.fr",
-    technologies: [typescript, svelte, sveltekit, rust, postgreSql, githubActions]
+    technologies: [
+      "typescript",
+      "svelte",
+      "sveltekit",
+      "rust",
+      "postgreSql",
+      "githubActions",
+      "actix",
+      "meilisearch",
+      "docker",
+      "css",
+      "html",
+      "redis"
+    ]
   }
 ]

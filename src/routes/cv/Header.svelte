@@ -16,7 +16,7 @@
   .header {
     grid-area: header;
     padding: var(--s3);
-    background-color: #3d7ad9;
+    background-color: var(--color1);
     color: #ffffff;
   }
 

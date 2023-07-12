@@ -2,39 +2,24 @@ import type { Skill } from "../models/models"
 
 export const libraries: Skill[] = [
   {
-    title: {
-      fr: "React",
-      en: "React"
-    }
+    technology: "svelte"
   },
   {
-    title: {
-      fr: "React Native",
-      en: "React Native"
-    }
+    technology: "sveltekit"
   },
   {
-    title: {
-      fr: "Redux",
-      en: "Redux"
-    }
+    technology: "react"
   },
   {
-    title: {
-      fr: "Svelte.js",
-      en: "Svelte.js"
-    }
+    technology: "reactNative"
   },
   {
-    title: {
-      fr: "Play Framework",
-      en: "Play Framework"
-    }
+    technology: "node"
   },
   {
-    title: {
-      fr: "Akka / Akka Stream",
-      en: "Akka / Akka Stream"
-    }
+    technology: "redux"
+  },
+  {
+    technology: "actix"
   }
 ]

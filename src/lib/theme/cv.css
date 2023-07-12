@@ -11,8 +11,8 @@ h2 {
   font-weight: bold;
   margin: 0;
   padding-bottom: var(--s1);
-  color: #3d7ad9;
-  border-bottom-color: #3d7ad9;
+  color: var(--color1);
+  border-bottom-color: var(--color1);
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
