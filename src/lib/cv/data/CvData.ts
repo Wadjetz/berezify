@@ -1,8 +1,7 @@
 import type { CvData } from "../models/models"
 import { experiences } from "./Experiences"
-import { languages } from "./Languages"
-import { libraries } from "./Libraries"
-import { programmingLanguages } from "./ProgrammingLanguages"
+import { projects } from "./Projects"
+import { skills } from "./Skills"
 import { studies } from "./Studies"
 
 export const cvData: CvData = {
@@ -19,83 +18,12 @@ export const cvData: CvData = {
     github: "wadjetz",
     website: "berezify.fr",
     description: {
-      fr: `Un développeur passionné qui aime faire de la veille, explorer des nouvelles technologies et créer des projets intéressants`,
-      en: `A passionate developer who likes explore new technologies and create interesting projects`
+      fr: `Je suis un développeur passionné et curieux, constamment à l'affût des dernières tendances technologiques. J'aime consacrer du temps à la veille technologique, explorant de nouvelles technologies et découvrant des solutions innovantes pour résoudre des problèmes complexes`,
+      en: `I'am a passionate and curious developer, constantly on the lookout for the latest technological trends. I like to spend time on technological watch, exploring new technologies and discovering innovative solutions to solve complex problems`
     }
   },
-  experiences: experiences,
-  studies: studies,
-  skills: {
-    programmingLanguages: programmingLanguages,
-    languages: languages,
-    libraries: libraries,
-    databases: [
-      {
-        title: {
-          fr: "PostgreSQL",
-          en: "PostgreSQL"
-        },
-        level: 5
-      },
-      {
-        title: {
-          fr: "MongoDB",
-          en: "MongoDB"
-        },
-        level: 5
-      }
-    ],
-    others: [
-      {
-        title: {
-          fr: "AWS",
-          en: "AWS"
-        }
-      },
-      {
-        title: {
-          fr: "Réseau",
-          en: "Network"
-        },
-        description: {
-          fr: "CCNA 1",
-          en: "CCNA 1"
-        }
-      },
-      {
-        title: {
-          fr: "Agilité",
-          en: "Agility"
-        },
-        description: {
-          fr: "Scrum et Kanban",
-          en: "Scrum and Kanban"
-        }
-      },
-      {
-        title: {
-          fr: "CircleCI",
-          en: "CircleCI"
-        }
-      },
-      {
-        title: {
-          fr: "GitHub Actions",
-          en: "GitHub Actions"
-        }
-      },
-      {
-        title: {
-          fr: "AWS Codebuild",
-          en: "AWS Codebuild"
-        }
-      },
-      {
-        title: {
-          fr: "Programmation fonctionnelle",
-          en: "Functional programming"
-        }
-      }
-    ]
-  }
+  experiences,
+  studies,
+  skills,
+  projects
 }

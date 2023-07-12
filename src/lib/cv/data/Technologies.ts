@@ -1,62 +1,59 @@
 import type { Technology } from "../models/models"
 
 export const scala: Technology = {
-  name: "Scala",
-  icon: "DiScala"
+  name: "Scala"
 }
 export const typescript: Technology = {
-  name: "Typescript",
-  icon: "DiJavascript"
+  name: "Typescript"
 }
 export const kafka: Technology = {
-  name: "Kafka",
-  icon: "DiScala"
+  name: "Kafka"
 }
 export const react: Technology = {
-  name: "React",
-  icon: "DiReact"
+  name: "React"
 }
 export const reactNative: Technology = {
-  name: "React Native",
-  icon: "DiReact"
+  name: "React Native"
 }
 export const redux: Technology = {
-  name: "Redux",
-  icon: "DiReact"
+  name: "Redux"
 }
 export const playFramework: Technology = {
-  name: "Play Framework",
-  icon: "DiScala"
+  name: "Play Framework"
 }
 export const swift: Technology = {
-  name: "Swift",
-  icon: "DiSwift"
+  name: "Swift"
 }
 export const kotlin: Technology = {
-  name: "Kotlin",
-  icon: "DiAndroid"
+  name: "Kotlin"
 }
 export const postgreSql: Technology = {
-  name: "PostgreSQL",
-  icon: "DiPostgresql"
+  name: "PostgreSQL"
 }
 export const android: Technology = {
-  name: "Android",
-  icon: "DiAndroid"
+  name: "Android"
 }
 export const iOS: Technology = {
-  name: "iOS",
-  icon: "DiApple"
+  name: "iOS"
 }
 export const circleCI: Technology = {
-  name: "CircleCI",
-  icon: "DiApple"
+  name: "CircleCI"
 }
 export const firebase: Technology = {
-  name: "Firebase",
-  icon: "DiApple"
+  name: "Firebase"
 }
 export const githubActions: Technology = {
-  name: "Github Actions",
-  icon: "DiApple"
+  name: "Github Actions"
+}
+export const svelte: Technology = {
+  name: "Svelte.js"
+}
+export const sveltekit: Technology = {
+  name: "SvelteKit"
+}
+export const rust: Technology = {
+  name: "Rust"
+}
+export const node: Technology = {
+  name: "Node.js"
 }

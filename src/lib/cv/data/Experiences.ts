@@ -7,6 +7,7 @@ import {
   iOS,
   kafka,
   kotlin,
+  node,
   playFramework,
   postgreSql,
   react,
@@ -20,7 +21,8 @@ import {
 const louve: Experience = {
   company: "Louve Invest",
   place: "Paris (Remote)",
-  startDate: new Date(2022, 1, 1),
+  startDate: new Date(2022, 0, 1),
+  endDate: new Date(2023, 6, 31),
   freelance: true,
   title: {
     fr: "Développeur React",
@@ -54,6 +56,7 @@ const treezor: Experience = {
   company: "Treezor",
   place: "Paris (Remote)",
   startDate: new Date(2021, 3, 1),
+  endDate: new Date(2021, 11, 20),
   freelance: true,
   title: {
     fr: "Développeur React-Native",
@@ -224,7 +227,7 @@ who does not hesitate to use new technologies and who created Play Framework.
 
     `
   },
-  technologies: [scala, playFramework, typescript, react, reactNative, redux, postgreSql]
+  technologies: [scala, playFramework, typescript, react, reactNative, redux, postgreSql, node]
 }
 
 export const experiences: Experience[] = [louve, treezor, squirel, zeenea, ditto, reachFive, zengularity]

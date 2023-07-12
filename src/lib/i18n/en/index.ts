@@ -9,7 +9,11 @@ const en = {
     programmingLanguages: "Programming languages",
     libraries: "Libraries and frameworks",
     databases: "Databases",
-    others: "Others"
+    others: "Others",
+    languages: "Languages"
+  },
+  projects: {
+    title: "Projects"
   },
   stydies: {
     title: "Stydies"
