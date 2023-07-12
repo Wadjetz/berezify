@@ -2,45 +2,27 @@ import type { Skill } from "../models/models"
 
 export const programmingLanguages: Skill[] = [
   {
-    title: {
-      fr: "Scala",
-      en: "Scala"
-    },
-    level: 5
+    technology: "typescript"
   },
   {
-    title: {
-      fr: "TypeScript / JavaScript",
-      en: "TypeScript / JavaScript"
-    },
-    level: 5
+    technology: "rust"
   },
   {
-    title: {
-      fr: "Rust",
-      en: "Rust"
-    },
-    level: 5
+    technology: "html"
   },
   {
-    title: {
-      fr: "HTML / CSS",
-      en: "HTML / CSS"
-    },
-    level: 5
+    technology: "css"
   },
   {
-    title: {
-      fr: "Swift",
-      en: "Swift"
-    },
-    level: 5
+    technology: "swift"
   },
   {
-    title: {
-      fr: "Kotlin",
-      en: "Kotlin"
-    },
-    level: 5
+    technology: "kotlin"
+  },
+  {
+    technology: "javascript"
+  },
+  {
+    technology: "scala"
   }
 ]

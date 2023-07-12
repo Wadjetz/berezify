@@ -8,6 +8,8 @@
   import enUS from "date-fns/locale/en-US/index"
   import fr from "date-fns/locale/fr/index"
 
+  import TechnologyIcon from "./TechnologyIcon.svelte"
+
   export let locale: Locales
 </script>
 
@@ -16,12 +18,12 @@
 
   {#each cvData.experiences as experience}
     <section>
-      <h3>
+      <div class="title">
+        <h3>{experience.title[locale]}</h3>
         {#if experience.freelance}
-          {$LL.freelance()}
+          <div class="freelance">{$LL.freelance()}</div>
         {/if}
-        {experience.title[locale]}
-      </h3>
+      </div>
       <div class="infos">
         <h4>{experience.company}</h4>
         <time>
@@ -37,7 +39,9 @@
       <ul class="technologies">
         {#each experience.technologies as technology}
           <li>
-            <Tag label={technology.name} />
+            <Tag label={$LL.technologies[technology]()}>
+              <TechnologyIcon {technology} />
+            </Tag>
           </li>
         {/each}
       </ul>
@@ -73,6 +77,20 @@
     font-size: 0.8rem;
   }
 
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s2);
+    flex-wrap: wrap;
+  }
+
+  .freelance {
+    font-size: 0.7rem;
+    color: var(--grey1);
+  }
+
   .infos {
     display: flex;
     flex-direction: row;
@@ -84,6 +102,7 @@
   .technologies {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: var(--s2);
     flex-wrap: wrap;
     list-style: none;

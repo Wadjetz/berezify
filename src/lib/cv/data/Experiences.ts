@@ -1,22 +1,4 @@
 import type { Experience } from "../models/models"
-import {
-  android,
-  circleCI,
-  firebase,
-  githubActions,
-  iOS,
-  kafka,
-  kotlin,
-  node,
-  playFramework,
-  postgreSql,
-  react,
-  reactNative,
-  redux,
-  scala,
-  swift,
-  typescript
-} from "./Technologies"
 
 const louve: Experience = {
   company: "Louve Invest",
@@ -25,7 +7,7 @@ const louve: Experience = {
   endDate: new Date(2023, 6, 31),
   freelance: true,
   title: {
-    fr: "Développeur React",
+    fr: "React développeur",
     en: "React developer"
   },
   description: {
@@ -49,7 +31,7 @@ Development of Louve Invest product
 - Setting up monorepo with yarn workspaces
       `
   },
-  technologies: [reactNative, typescript, react, firebase, githubActions]
+  technologies: ["typescript", "react", "reactNative", "css", "html", "firebase", "githubActions"]
 }
 
 const treezor: Experience = {
@@ -78,7 +60,7 @@ Treezor is a neo bank as a service that provides banking APIs and components for
 - Development of the demonstration mobile application using the UI-Kit
       `
   },
-  technologies: [reactNative, typescript, react, iOS, android]
+  technologies: ["typescript", "reactNative", "iOS", "android"]
 }
 
 const squirel: Experience = {
@@ -99,7 +81,7 @@ Développement des nouvelles fonctionnalités de l'application mobile et du site
 Development of new features for the mobile application and the website www.ouigo.com 
       `
   },
-  technologies: [reactNative, typescript, redux, react, iOS, android]
+  technologies: ["typescript", "react", "reactNative", "redux", "css", "html", "iOS", "android", "scrum"]
 }
 
 const zeenea: Experience = {
@@ -122,7 +104,7 @@ A database metadata visualization application for data scientists.
 Creation of new, more generic APIs for use by several different applications
       `
   },
-  technologies: [scala, typescript]
+  technologies: ["scala", "typescript", "scrum"]
 }
 
 const ditto: Experience = {
@@ -149,7 +131,18 @@ Development from scratch of a new generation banking platform and APIs
 - Development of the catalog part of the platform. Creation of new APIs and microservices
     `
   },
-  technologies: [scala, typescript, kafka, postgreSql, react]
+  technologies: [
+    "scala",
+    "typescript",
+    "kafka",
+    "postgreSql",
+    "react",
+    "redux",
+    "css",
+    "html",
+    "scrum",
+    "fonctionalProgramming"
+  ]
 }
 
 const reachFive: Experience = {
@@ -181,7 +174,21 @@ Reachfive is a user management and authentication startup
 - Development of new features on the back-end and front-end
     `
   },
-  technologies: [scala, typescript, react, swift, kotlin, android, iOS, circleCI]
+  technologies: [
+    "typescript",
+    "react",
+    "reactNative",
+    "swift",
+    "kotlin",
+    "android",
+    "iOS",
+    "circleCI",
+    "css",
+    "html",
+    "fonctionalProgramming",
+    "scala",
+    "playFramework"
+  ]
 }
 
 const zengularity: Experience = {
@@ -227,7 +234,25 @@ who does not hesitate to use new technologies and who created Play Framework.
 
     `
   },
-  technologies: [scala, playFramework, typescript, react, reactNative, redux, postgreSql, node]
+  technologies: [
+    "typescript",
+    "redux",
+    "react",
+    "reactNative",
+    "node",
+    "circleCI",
+    "css",
+    "html",
+    "fonctionalProgramming",
+    "scala",
+    "playFramework",
+    "mongoDB",
+    "postgreSql",
+    "docker",
+    "linux",
+    "agility",
+    "scrum"
+  ]
 }
 
 export const experiences: Experience[] = [louve, treezor, squirel, zeenea, ditto, reachFive, zengularity]

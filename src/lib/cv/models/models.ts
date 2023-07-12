@@ -1,4 +1,5 @@
 import type { IntlValue } from "./Intl"
+import type { Technology } from "./Technologies"
 
 export interface Person {
   firstName: string
@@ -21,11 +22,6 @@ export interface Experience {
   place: string
   description: IntlValue
   technologies: Technology[]
-}
-
-export interface Technology {
-  name: string
-  icon?: string
 }
 
 export interface Study {
@@ -56,9 +52,10 @@ export interface Skills {
 }
 
 export interface Skill {
-  title: IntlValue
+  title?: IntlValue
   description?: IntlValue
   level?: number
+  technology?: Technology
 }
 
 export interface Project {

@@ -9,70 +9,48 @@ export const skills: Skills = {
   libraries: libraries,
   databases: [
     {
-      title: {
-        fr: "PostgreSQL",
-        en: "PostgreSQL"
-      },
-      level: 5
+      technology: "postgreSql"
     },
     {
-      title: {
-        fr: "MongoDB",
-        en: "MongoDB"
-      },
-      level: 5
+      technology: "redis"
+    },
+    {
+      technology: "meilisearch"
+    },
+    {
+      technology: "mongoDB"
     }
   ],
   others: [
     {
-      title: {
-        fr: "AWS",
-        en: "AWS"
-      }
+      technology: "fonctionalProgramming"
+    },
+    {
+      technology: "docker"
+    },
+    {
+      technology: "circleCI"
+    },
+    {
+      technology: "githubActions"
+    },
+    {
+      technology: "firebase"
+    },
+    {
+      technology: "network"
     },
     {
       title: {
-        fr: "Réseau",
-        en: "Network"
-      },
-      description: {
         fr: "CCNA 1",
         en: "CCNA 1"
       }
     },
     {
-      title: {
-        fr: "Agilité",
-        en: "Agility"
-      },
-      description: {
-        fr: "Scrum et Kanban",
-        en: "Scrum and Kanban"
-      }
+      technology: "agility"
     },
     {
-      title: {
-        fr: "CircleCI",
-        en: "CircleCI"
-      }
-    },
-    {
-      title: {
-        fr: "GitHub Actions",
-        en: "GitHub Actions"
-      }
-    },
-    {
-      title: {
-        fr: "AWS Codebuild",
-        en: "AWS Codebuild"
-      }
-    },
-    {
-      title: {
-        fr: "Programmation fonctionnelle",
-        en: "Functional programming"
-      }
+      technology: "scrum"
     }
   ]
 }

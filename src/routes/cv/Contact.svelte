@@ -34,7 +34,7 @@
     gap: var(--s2);
   }
   .link {
-    color: #3d7ad9;
+    color: var(--color1);
     text-decoration: none;
   }
   .item {
