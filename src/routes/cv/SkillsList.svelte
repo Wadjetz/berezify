@@ -12,7 +12,7 @@
 </script>
 
 <section>
-  <h3>{title}</h3>
+  <h3 class="cv-h3">{title}</h3>
   <ul role="list">
     {#each skills as skill}
       {#if skill.title}

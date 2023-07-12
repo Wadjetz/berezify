@@ -61,4 +61,15 @@
     flex-direction: column;
     gap: var(--s3);
   }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: var(--s1);
+    color: var(--color1);
+    border-bottom-color: var(--color1);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
 </style>
