@@ -29,6 +29,7 @@
     padding: var(--s6) var(--s3);
     max-width: 1000px;
     margin: 0 auto;
+    background-color: var(--grey3);
   }
 
   h1 {

@@ -27,7 +27,7 @@
 <style>
   .skills {
     padding: var(--s7) var(--s3);
-    background-color: var(--color2-inverse);
+    background-color: var(--grey3);
   }
 
   .title {
