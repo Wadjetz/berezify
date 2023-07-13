@@ -23,7 +23,6 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--s5);
     padding: var(--s7) var(--s3);
-    background-color: var(--grey3);
     max-width: 1000px;
     margin: 0 auto;
   }

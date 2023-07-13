@@ -2,6 +2,7 @@ import type { Translation } from "../i18n-types"
 
 const fr = {
   portfolio: {
+    title: "Portfolio",
     name: "Egor Berezovskiy",
     nav: {
       cv: "CV",
