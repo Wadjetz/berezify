@@ -2,6 +2,7 @@ import type { BaseTranslation } from "../i18n-types"
 
 const en = {
   portfolio: {
+    title: "Portfolio",
     name: "Egor Berezovskiy",
     nav: {
       cv: "CV",

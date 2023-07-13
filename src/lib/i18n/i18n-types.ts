@@ -16,6 +16,10 @@ export type Translations = RootTranslation
 type RootTranslation = {
 	portfolio: {
 		/**
+		 * P​o​r​t​f​o​l​i​o
+		 */
+		title: string
+		/**
 		 * E​g​o​r​ ​B​e​r​e​z​o​v​s​k​i​y
 		 */
 		name: string
@@ -272,6 +276,10 @@ type RootTranslation = {
 
 export type TranslationFunctions = {
 	portfolio: {
+		/**
+		 * Portfolio
+		 */
+		title: () => LocalizedString
 		/**
 		 * Egor Berezovskiy
 		 */
