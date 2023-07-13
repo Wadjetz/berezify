@@ -9,9 +9,6 @@ const L = i18n()
 export const handle = (async ({ event, resolve }) => {
   const acceptLanguageHeaderDetector = initAcceptLanguageHeaderDetector(event.request)
   const locale = detectLocale(acceptLanguageHeaderDetector)
-  const LL = L[locale]
-  event.locals.locale = locale
-  event.locals.LL = LL
 
   if (event.url.pathname.startsWith("/cv/en")) {
     const LL = L["en"]
@@ -20,6 +17,10 @@ export const handle = (async ({ event, resolve }) => {
   } else if (event.url.pathname.startsWith("/cv/fr")) {
     const LL = L["fr"]
     event.locals.locale = "fr"
+    event.locals.LL = LL
+  } else {
+    const LL = L[locale]
+    event.locals.locale = locale
     event.locals.LL = LL
   }
 

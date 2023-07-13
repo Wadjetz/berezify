@@ -1,11 +1,11 @@
 <script lang="ts">
   import { page } from "$app/stores"
+  import Aside from "$lib/components/cv/Aside.svelte"
+  import ExperiencesList from "$lib/components/cv/ExperiencesList.svelte"
+  import Header from "$lib/components/cv/Header.svelte"
   import { cvData } from "$lib/cv/data/CvData"
   import { LL } from "$lib/i18n/i18n-svelte"
 
-  import Aside from "../Aside.svelte"
-  import ExperiencesList from "../ExperiencesList.svelte"
-  import Header from "../Header.svelte"
   import type { PageData } from "./$types"
 
   export let data: PageData

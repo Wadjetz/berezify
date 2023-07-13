@@ -4,8 +4,7 @@
   import type { Locales } from "$lib/i18n/i18n-types"
   import Markdown from "$lib/uikit/Markdown.svelte"
   import Tag from "$lib/uikit/Tag.svelte"
-
-  import TechnologyIcon from "./TechnologyIcon.svelte"
+  import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
 
   export let project: Project
   export let locale: Locales
