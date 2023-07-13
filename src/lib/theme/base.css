@@ -23,6 +23,8 @@
   --grey2: #c4c4c4;
   --grey3: #fbfbfb;
   --color1: #3d7ad9;
+  --color2: #445964;
+  --color2-inverse: #ffffff;
 }
 
 *,
@@ -35,4 +37,13 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
+}
+
+.cv-h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: var(--s1);
 }

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "$lib/theme/cv.css"
 </script>
 
 <main>
@@ -11,6 +10,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--s4);
-    margin-bottom: var(--s5);
+    padding-bottom: var(--s5);
   }
 </style>
