@@ -4,11 +4,10 @@
   import type { Locales } from "$lib/i18n/i18n-types"
   import Markdown from "$lib/uikit/Markdown.svelte"
   import Tag from "$lib/uikit/Tag.svelte"
+  import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
   import { format } from "date-fns"
   import enUS from "date-fns/locale/en-US/index"
   import fr from "date-fns/locale/fr/index"
-
-  import TechnologyIcon from "./TechnologyIcon.svelte"
 
   export let locale: Locales
 </script>

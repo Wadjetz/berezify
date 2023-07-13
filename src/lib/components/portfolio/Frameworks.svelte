@@ -1,8 +1,7 @@
 <script lang="ts">
   import type { Technology } from "$lib/cv/models/Technologies"
   import { LL } from "$lib/i18n/i18n-svelte"
-
-  import TechnologyIcon from "../cv/TechnologyIcon.svelte"
+  import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
 
   const frameworks: Technology[] = ["sveltekit", "reactNative", "node"]
 

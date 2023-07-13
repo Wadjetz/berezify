@@ -1,12 +1,11 @@
 <script lang="ts">
+  import Contact from "$lib/components/cv/Contact.svelte"
+  import Project from "$lib/components/cv/Project.svelte"
+  import SkillsList from "$lib/components/cv/SkillsList.svelte"
+  import Study from "$lib/components/cv/Study.svelte"
   import { cvData } from "$lib/cv/data/CvData"
   import { LL } from "$lib/i18n/i18n-svelte"
   import type { Locales } from "$lib/i18n/i18n-types"
-
-  import Contact from "./Contact.svelte"
-  import Project from "./Project.svelte"
-  import SkillsList from "./SkillsList.svelte"
-  import Study from "./Study.svelte"
 
   export let locale: Locales
 </script>

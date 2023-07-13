@@ -3,8 +3,7 @@
   import { LL } from "$lib/i18n/i18n-svelte"
   import type { Locales } from "$lib/i18n/i18n-types"
   import Tag from "$lib/uikit/Tag.svelte"
-
-  import TechnologyIcon from "./TechnologyIcon.svelte"
+  import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
 
   export let locale: Locales
   export let title: string
