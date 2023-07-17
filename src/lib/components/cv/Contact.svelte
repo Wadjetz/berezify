@@ -1,9 +1,14 @@
 <script lang="ts">
+  import { page } from "$app/stores"
   import { cvData } from "$lib/cv/data/CvData"
 
+  import EmailIcon from "virtual:icons/mdi/email"
   import GithubIcon from "virtual:icons/mdi/github"
   import LinkedinIcon from "virtual:icons/mdi/linkedin"
+  import PhoneIcon from "virtual:icons/mdi/phone-classic"
   import WebIcon from "virtual:icons/mdi/web"
+
+  $: queries = Object.fromEntries(new URLSearchParams($page.url.search))
 </script>
 
 <section>
@@ -26,6 +31,22 @@
       {cvData.person.website}
     </a>
   </div>
+  {#if queries["phone"]}
+    <div class="item">
+      <PhoneIcon size="20" color="#3d7ad9" />
+      <a href="tel:{queries['phone']}" class="link" target="_blank">
+        {queries["phone"]}
+      </a>
+    </div>
+  {/if}
+  {#if queries["email"]}
+    <div class="item">
+      <EmailIcon size="20" color="#3d7ad9" />
+      <a href="mailto:{queries['email']}" class="link" target="_blank">
+        {queries["email"]}
+      </a>
+    </div>
+  {/if}
 </section>
 
 <style>

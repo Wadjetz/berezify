@@ -61,6 +61,12 @@ type RootTranslation = {
 			 */
 			databases: string
 		}
+		projects: {
+			/**
+			 * P​r​o​j​e​t​s​ ​p​e​r​s​o​n​n​e​l​s
+			 */
+			title: string
+		}
 	}
 	cv: {
 		/**
@@ -321,6 +327,12 @@ export type TranslationFunctions = {
 			 * My favorite databases
 			 */
 			databases: () => LocalizedString
+		}
+		projects: {
+			/**
+			 * Projets personnels
+			 */
+			title: () => LocalizedString
 		}
 	}
 	cv: {

@@ -4,7 +4,7 @@ import type { RequestHandler } from "./$types"
 
 export const GET = (async ({ url }) => {
   const locale = url.searchParams.get("locale")
-  const pdf = await getPdfFromUrl(`${url.origin}/cv/${locale}`)
+  const pdf = await getPdfFromUrl(`${url.origin}/cv/${locale}${url.search}`)
   return new Response(pdf, {
     status: 200,
     headers: {
