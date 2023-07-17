@@ -10,7 +10,7 @@ const fr = {
     },
     home: {
       hello: "Bonjour,",
-      iam: "Je suis un developpeur full stack",
+      iam: "Je suis un développeur Full Stack",
       description:
         "passionné et curieux, constamment à l'affût des dernières tendances technologiques. J'aime consacrer du temps à la veille technologique, explorant de nouvelles technologies et découvrant des solutions innovantes pour résoudre des problèmes complexes"
     },
@@ -18,6 +18,9 @@ const fr = {
       programmingLanguages: "Mes langages de programmation préférés",
       frameworks: "Mes frameworks préférés",
       databases: "Mes bases de données préférées"
+    },
+    projects: {
+      title: "Projets personnels"
     }
   },
   cv: {

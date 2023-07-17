@@ -18,6 +18,9 @@ const en = {
       programmingLanguages: "My favorite programming languages",
       frameworks: "My favorite frameworks",
       databases: "My favorite databases"
+    },
+    projects: {
+      title: "Projets personnels"
     }
   },
   cv: {
