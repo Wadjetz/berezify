@@ -1,12 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:svelte/recommended",
-    "prettier",
-    "plugin:storybook/recommended"
-  ],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:svelte/recommended", "prettier"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
   parserOptions: {
@@ -18,6 +12,12 @@ module.exports = {
     browser: true,
     es2017: true,
     node: true
+  },
+  rules: {
+    "svelte/no-unused-svelte-ignore": "off",
+    "svelte/no-at-html-tags": "warn",
+    "no-useless-escape": "warn",
+    "no-undef": "warn"
   },
   overrides: [
     {

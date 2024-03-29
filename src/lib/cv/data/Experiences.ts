@@ -1,5 +1,24 @@
 import type { Experience } from "../models/models"
 
+const sncf: Experience = {
+  company: "SNCF Réseau",
+  place: "Saint-Denis",
+  startDate: new Date(2023, 9, 21),
+  freelance: true,
+  title: {
+    fr: "Développeur Rust",
+    en: "Rust developer"
+  },
+  description: {
+    fr: `Developement d'un simulateur de train open source en Rust`,
+    en: `Development of an open source train simulator in Rust`
+  },
+  link: "https://osrd.fr",
+  linkLabel: "osrd.fr",
+  current: true,
+  technologies: ["rust", "actix", "postgreSql", "docker", "react", "css", "html", "githubActions"]
+}
+
 const louve: Experience = {
   company: "Louve Invest",
   place: "Paris (Remote)",
@@ -255,4 +274,4 @@ who does not hesitate to use new technologies and who created Play Framework.
   ]
 }
 
-export const experiences: Experience[] = [louve, treezor, squirel, zeenea, ditto, reachFive, zengularity]
+export const experiences: Experience[] = [sncf, louve, treezor, squirel, zeenea, ditto, reachFive, zengularity]
