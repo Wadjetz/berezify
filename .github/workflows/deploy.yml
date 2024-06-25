@@ -50,7 +50,7 @@ jobs:
             cat > docker-compose.yml << EOF
             version: '3'
             services:
-                readable:
+                berezify:
                     image: wadjetz/berezify:latest
                     container_name: berezify
                     ports:
