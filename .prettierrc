@@ -9,9 +9,6 @@
   "svelteStrictMode": false,
   "svelteAllowShorthand": true,
   "svelteIndentScriptAndStyle": true,
-  "importOrder": ["^svelte(.*)$", "^virtual:icons/(.*)$", "^../../components/(.*)$", "^../components/(.*)$", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
   "overrides": [
     {
       "files": "*.svelte",
@@ -20,6 +17,5 @@
       }
     }
   ],
-  "pluginSearchDirs": ["."],
   "plugins": ["prettier-plugin-svelte"]
 }

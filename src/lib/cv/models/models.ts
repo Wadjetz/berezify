@@ -20,6 +20,8 @@ export interface Experience {
   title: IntlValue
   company: string
   place: string
+  link?: string
+  linkLabel?: string
   description: IntlValue
   technologies: Technology[]
 }

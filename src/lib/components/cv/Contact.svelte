@@ -14,26 +14,26 @@
 <section>
   <h3 class="cv-h3">{cvData.person.firstName} {cvData.person.lastName}</h3>
   <div class="item">
-    <GithubIcon size="20" color="#3d7ad9" />
+    <GithubIcon width="20" height="20" color="#3d7ad9" />
     <a href="https://github.com/{cvData.person.github}" class="link" target="_blank">
       {cvData.person.github}
     </a>
   </div>
   <div class="item">
-    <LinkedinIcon size="20" color="#3d7ad9" />
+    <LinkedinIcon width="20" height="20" color="#3d7ad9" />
     <a href="https://www.linkedin.com/in/{cvData.person.linkedin}" class="link" target="_blank">
       {cvData.person.linkedin}
     </a>
   </div>
   <div class="item">
-    <WebIcon size="20" color="#3d7ad9" />
+    <WebIcon width="20" height="20" color="#3d7ad9" />
     <a href="https://{cvData.person.website}" class="link" target="_blank">
       {cvData.person.website}
     </a>
   </div>
   {#if queries["phone"]}
     <div class="item">
-      <PhoneIcon size="20" color="#3d7ad9" />
+      <PhoneIcon width="20" height="20" color="#3d7ad9" />
       <a href="tel:{queries['phone']}" class="link" target="_blank">
         {queries["phone"]}
       </a>
@@ -41,7 +41,7 @@
   {/if}
   {#if queries["email"]}
     <div class="item">
-      <EmailIcon size="20" color="#3d7ad9" />
+      <EmailIcon width="20" height="20" color="#3d7ad9" />
       <a href="mailto:{queries['email']}" class="link" target="_blank">
         {queries["email"]}
       </a>

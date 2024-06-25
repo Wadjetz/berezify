@@ -1,13 +1,13 @@
 <script lang="ts">
+  import { format } from "date-fns"
+  import { enUS, fr } from "date-fns/locale"
+
+  import type { Locales } from "$lib/i18n/i18n-types"
   import { cvData } from "$lib/cv/data/CvData"
   import { LL } from "$lib/i18n/i18n-svelte"
-  import type { Locales } from "$lib/i18n/i18n-types"
   import Markdown from "$lib/uikit/Markdown.svelte"
   import Tag from "$lib/uikit/Tag.svelte"
   import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
-  import { format } from "date-fns"
-  import enUS from "date-fns/locale/en-US/index"
-  import fr from "date-fns/locale/fr/index"
 
   export let locale: Locales
 </script>
@@ -35,6 +35,11 @@
       <div class="markdown">
         <Markdown source={experience.description[locale]} />
       </div>
+      {#if experience.link}
+        <div class="link">
+          <a target="_blank" href={experience.link}>{experience.linkLabel ?? experience.link}</a>
+        </div>
+      {/if}
       <ul class="technologies">
         {#each experience.technologies as technology}
           <li>
@@ -125,5 +130,16 @@
     color: #3d7ad9;
     margin-top: 0;
     margin-bottom: var(--s1);
+  }
+
+  .link a {
+    font-size: 0.9rem;
+    color: var(--color1);
+    text-decoration: none;
+    margin-bottom: var(--s2);
+  }
+
+  .link {
+    margin-bottom: var(--s2);
   }
 </style>

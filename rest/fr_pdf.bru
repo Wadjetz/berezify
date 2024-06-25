@@ -1,0 +1,17 @@
+meta {
+  name: fr_pdf
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/api/cv/pdf?locale=fr
+  body: none
+  auth: none
+}
+
+query {
+  locale: fr
+  ~phone: 06 
+  ~email: egor@
+}
