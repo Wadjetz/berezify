@@ -10,13 +10,13 @@ const sncf: Experience = {
     en: "Rust developer"
   },
   description: {
-    fr: `Developement d'un simulateur de train open source en Rust`,
-    en: `Development of an open source train simulator in Rust`
+    fr: `Contribution au développement d’une application web open source dédiée à la conception et à la gestion des infrastructures ferroviaires. Ce projet inclut la planification des horaires, l’analyse de capacité, la gestion de conflits, et la simulation de signalisation ferroviaire. OSRD vise l’interopérabilité des formats d’infrastructure et des systèmes de signalisation, avec une gouvernance ouverte et collaborative.`,
+    en: `Contributing to the development of an open-source web application for railway infrastructure design, timetable management, capacity analysis, and signaling simulation. OSRD focuses on interoperability between infrastructure formats and signaling systems, following an open and collaborative governance model.`
   },
   link: "https://osrd.fr",
   linkLabel: "osrd.fr",
   current: true,
-  technologies: ["rust", "actix", "postgreSql", "docker", "react", "css", "html", "githubActions"]
+  technologies: ["rust", "actix", "axum", "postgreSql", "docker", "react", "css", "html", "githubActions"]
 }
 
 const louve: Experience = {
