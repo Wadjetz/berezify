@@ -80,6 +80,7 @@ const en = {
     meilisearch: "Meilisearch",
     d3: "D3.js",
     actix: "Actix",
+    axum: "Axum",
     docker: "Docker",
     shell: "Shell",
     linux: "Linux",

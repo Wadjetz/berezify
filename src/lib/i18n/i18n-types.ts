@@ -258,6 +258,10 @@ type RootTranslation = {
 		 */
 		actix: string
 		/**
+		 * A​x​u​m
+		 */
+		axum: string
+		/**
 		 * D​o​c​k​e​r
 		 */
 		docker: string
@@ -524,6 +528,10 @@ export type TranslationFunctions = {
 		 * Actix
 		 */
 		actix: () => LocalizedString
+		/**
+		 * Axum
+		 */
+		axum: () => LocalizedString
 		/**
 		 * Docker
 		 */

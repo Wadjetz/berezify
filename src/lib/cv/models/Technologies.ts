@@ -31,6 +31,7 @@ export const Technologies = [
   "meilisearch",
   "d3",
   "actix",
+  "axum",
   "docker",
   "shell",
   "linux",
