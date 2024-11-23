@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:22
 
 # We don't need the standalone Chromium
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
