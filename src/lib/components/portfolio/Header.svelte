@@ -4,7 +4,7 @@
 </script>
 
 <header>
-  <img alt="The project logo" src={logo} />
+  <img alt="The project logo" src={logo} width="30" height="30" />
 
   <h1>{$LL.portfolio.name()}</h1>
 
