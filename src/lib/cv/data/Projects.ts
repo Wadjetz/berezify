@@ -48,8 +48,8 @@ A cooking recipes application
 - Files stackage
       `
     },
-    link: "https://mindstream.berezify.fr",
-    linkLabel: "mindstream.berezify.fr",
+    link: "https://brss.berezify.fr",
+    linkLabel: "brss.berezify.fr",
     technologies: [
       "typescript",
       "svelte",
