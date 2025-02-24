@@ -1,75 +1,80 @@
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import globals from "globals";
-import tsParser from "@typescript-eslint/parser";
-import parser from "svelte-eslint-parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import typescriptEslint from "@typescript-eslint/eslint-plugin"
+import globals from "globals"
+import tsParser from "@typescript-eslint/parser"
+import parser from "svelte-eslint-parser"
+import path from "node:path"
+import { fileURLToPath } from "node:url"
+import js from "@eslint/js"
+import { FlatCompat } from "@eslint/eslintrc"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
+})
 
-export default [{
+export default [
+  {
     ignores: [
-        "**/.DS_Store",
-        "**/node_modules",
-        "build",
-        ".svelte-kit",
-        "package",
-        "**/.env",
-        "**/.env.*",
-        "!**/.env.example",
-        "**/pnpm-lock.yaml",
-        "**/package-lock.json",
-        "**/yarn.lock",
-    ],
-}, ...compat.extends(
+      "**/.DS_Store",
+      "**/node_modules",
+      "build",
+      ".svelte-kit",
+      "package",
+      "**/.env",
+      "**/.env.*",
+      "!**/.env.example",
+      "**/pnpm-lock.yaml",
+      "**/package-lock.json",
+      "**/yarn.lock"
+    ]
+  },
+  ...compat.extends(
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:svelte/recommended",
-    "prettier",
-), {
+    "prettier"
+  ),
+  {
     plugins: {
-        "@typescript-eslint": typescriptEslint,
+      "@typescript-eslint": typescriptEslint
     },
 
     languageOptions: {
-        globals: {
-            ...globals.browser,
-            ...globals.node,
-        },
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      },
 
-        parser: tsParser,
-        ecmaVersion: 2020,
-        sourceType: "module",
+      parser: tsParser,
+      ecmaVersion: 2020,
+      sourceType: "module",
 
-        parserOptions: {
-            extraFileExtensions: [".svelte"],
-        },
+      parserOptions: {
+        extraFileExtensions: [".svelte"]
+      }
     },
 
     rules: {
-        "svelte/no-unused-svelte-ignore": "off",
-        "svelte/no-at-html-tags": "warn",
-        "no-useless-escape": "warn",
-        "no-undef": "warn",
-    },
-}, {
+      "svelte/no-unused-svelte-ignore": "off",
+      "svelte/no-at-html-tags": "warn",
+      "no-useless-escape": "warn",
+      "no-undef": "warn"
+    }
+  },
+  {
     files: ["**/*.svelte"],
 
     languageOptions: {
-        parser: parser,
-        ecmaVersion: 5,
-        sourceType: "script",
+      parser: parser,
+      ecmaVersion: 5,
+      sourceType: "script",
 
-        parserOptions: {
-            parser: "@typescript-eslint/parser",
-        },
-    },
-}];
+      parserOptions: {
+        parser: "@typescript-eslint/parser"
+      }
+    }
+  }
+]
