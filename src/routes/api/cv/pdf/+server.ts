@@ -5,7 +5,7 @@ import type { RequestHandler } from "./$types"
 export const GET = (async ({ url }) => {
   const locale = url.searchParams.get("locale")
   const pdf = await getPdfFromUrl(`${url.origin}/cv/${locale}${url.search}`)
-  return new Response(pdf, {
+  return new Response(Buffer.from(pdf), {
     status: 200,
     headers: {
       "Content-Type": "application/pdf",
