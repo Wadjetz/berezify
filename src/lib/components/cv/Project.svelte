@@ -1,13 +1,14 @@
 <script lang="ts">
   import type { Project } from "$lib/cv/models/models"
-  import { LL } from "$lib/i18n/i18n-svelte"
-  import type { Locales } from "$lib/i18n/i18n-types"
+  import { getLocale } from "$lib/paraglide/runtime"
   import Markdown from "$lib/uikit/Markdown.svelte"
   import Tag from "$lib/uikit/Tag.svelte"
   import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
+  import { technologies } from "$lib/utils/technologies"
 
-  export let project: Project
-  export let locale: Locales
+  const { project }: { project: Project } = $props()
+
+  const locale = $derived(getLocale())
 </script>
 
 <div class="project">
@@ -23,7 +24,7 @@
   <ul class="technologies">
     {#each project.technologies as technology}
       <li>
-        <Tag label={$LL.technologies[technology]()}>
+        <Tag label={technologies(technology)}>
           <TechnologyIcon {technology} />
         </Tag>
       </li>

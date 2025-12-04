@@ -1,10 +1,11 @@
 <script lang="ts">
   import type { Study } from "$lib/cv/models/models"
-  import type { Locales } from "$lib/i18n/i18n-types"
+  import { getLocale } from "$lib/paraglide/runtime"
   import Markdown from "$lib/uikit/Markdown.svelte"
 
-  export let locale: Locales
-  export let study: Study
+  const { study }: { study: Study } = $props()
+
+  const locale = $derived(getLocale())
 </script>
 
 <section>

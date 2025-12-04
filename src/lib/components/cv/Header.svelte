@@ -1,8 +1,8 @@
 <script lang="ts">
   import { cvData } from "$lib/cv/data/CvData"
-  import type { Locales } from "$lib/i18n/i18n-types"
+  import { getLocale } from "$lib/paraglide/runtime"
 
-  export let locale: Locales
+  const locale = $derived(getLocale())
 </script>
 
 <header class="header">

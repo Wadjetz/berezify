@@ -1,11 +1,10 @@
 <script lang="ts">
-  import type { Technology } from "$lib/cv/models/Technologies"
-  import { LL } from "$lib/i18n/i18n-svelte"
-
   import CssIcon from "virtual:icons/mdi/language-css3"
   import HtmlIcon from "virtual:icons/mdi/language-html5"
   import RustIcon from "virtual:icons/mdi/language-rust"
   import TypescriptIcon from "virtual:icons/mdi/language-typescript"
+  import { m } from "$lib/paraglide/messages"
+  import { type Technology, technologies } from "$lib/utils/technologies"
 
   const programmingLanguages: Technology[] = ["rust", "typescript", "css", "html"]
 
@@ -15,11 +14,11 @@
 
 <section class="skills">
   <div class="content">
-    <h2 class="title">{$LL.portfolio.skills.programmingLanguages()}</h2>
+    <h2 class="title">{m.portfolio_skills_programmingLanguages()}</h2>
     <div class="items">
       {#each programmingLanguages as programmingLanguage}
         <div class="item">
-          <h3>{$LL.technologies[programmingLanguage]()}</h3>
+          <h3>{technologies(programmingLanguage)}</h3>
           <div>
             {#if programmingLanguage === "typescript"}
               <TypescriptIcon width={iconSize} height={iconSize} color={iconColor} />

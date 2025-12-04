@@ -1,15 +1,14 @@
-<script context="module">
-  const md = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: true
-  })
-</script>
-
 <script lang="ts">
-  import MarkdownIt from "markdown-it"
+  import { marked } from "marked"
+  import sanitizeHtml from "sanitize-html"
 
-  export let source: string = ""
+  interface Props {
+    source: string
+  }
+
+  let { source }: Props = $props()
+
+  const html = $derived(marked.parse(sanitizeHtml(source)))
 </script>
 
-{@html md.render(source)}
+{@html html}

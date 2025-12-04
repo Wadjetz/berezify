@@ -1,9 +1,15 @@
 <script lang="ts">
-  export let label: string
+  import type { Snippet } from "svelte"
+
+  interface Props {
+    label: string
+    children?: Snippet
+  }
+  let { label, children }: Props = $props()
 </script>
 
 <div class="tag">
-  <slot />
+  {@render children?.()}
   {label}
 </div>
 

@@ -1,20 +1,20 @@
 <script lang="ts">
   import logo from "$lib/assets/logo.svg"
-  import { LL } from "$lib/i18n/i18n-svelte"
+  import { m } from "$lib/paraglide/messages"
 </script>
 
 <header>
   <img alt="The project logo" src={logo} width="30" height="30" />
 
-  <h1>{$LL.portfolio.name()}</h1>
+  <h1>{m.portfolio_name()}</h1>
 
   <nav>
     <ul role="list" class="menu">
       <li>
-        <a href="/">{$LL.portfolio.nav.home()}</a>
+        <a href="/">{m.portfolio_nav_home()}</a>
       </li>
       <li>
-        <a href="/cv/fr">{$LL.portfolio.nav.cv()}</a>
+        <a href="/cv">{m.portfolio_nav_cv()}</a>
       </li>
     </ul>
   </nav>

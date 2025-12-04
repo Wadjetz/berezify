@@ -48,8 +48,8 @@ A cooking recipes application
 - Files stackage
       `
     },
-    link: "https://brss.berezify.fr",
-    linkLabel: "brss.berezify.fr",
+    link: "https://brss.brocolix.fr",
+    linkLabel: "brss.brocolix.fr",
     technologies: [
       "typescript",
       "svelte",

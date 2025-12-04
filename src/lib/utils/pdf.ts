@@ -1,7 +1,10 @@
 import puppeteer from "puppeteer"
 
 export async function getPdfFromUrl(url: string) {
-  const browser = await puppeteer.launch({ args: ["--no-sandbox"], headless: true })
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox"],
+    headless: true
+  })
   const page = await browser.newPage()
   await page.goto(url, { waitUntil: "networkidle0" })
   await page.emulateMediaType("screen")

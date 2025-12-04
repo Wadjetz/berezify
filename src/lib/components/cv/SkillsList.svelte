@@ -1,13 +1,17 @@
 <script lang="ts">
   import type { Skill } from "$lib/cv/models/models"
-  import { LL } from "$lib/i18n/i18n-svelte"
-  import type { Locales } from "$lib/i18n/i18n-types"
+  import { getLocale } from "$lib/paraglide/runtime"
   import Tag from "$lib/uikit/Tag.svelte"
   import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
+  import { technologies } from "$lib/utils/technologies"
 
-  export let locale: Locales
-  export let title: string
-  export let skills: Skill[]
+  interface Props {
+    title: string
+    skills: Skill[]
+  }
+  const { title, skills }: Props = $props()
+
+  const locale = $derived(getLocale())
 </script>
 
 <section>
@@ -20,7 +24,7 @@
         </li>
       {:else if skill.technology}
         <li>
-          <Tag label={$LL.technologies[skill.technology]()}>
+          <Tag label={technologies(skill.technology)}>
             <TechnologyIcon technology={skill.technology} />
           </Tag>
         </li>
