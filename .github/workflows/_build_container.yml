@@ -1,0 +1,15 @@
+on:
+  workflow_call:
+jobs:
+  check:
+    name: Build container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Build and push container image
+        run: |
+          docker login --username wadjetz --password ${{ secrets.GHCR_TOKEN }} ghcr.io
+          docker build -f Dockerfile --tag ghcr.io/wadjetz/berezify:latest .
+          docker push ghcr.io/wadjetz/berezify:latest

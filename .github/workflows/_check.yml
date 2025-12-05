@@ -1,0 +1,18 @@
+on:
+  workflow_call:
+jobs:
+  check:
+    name: Project check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+      - name: Npm install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Check
+        run: npm run check
