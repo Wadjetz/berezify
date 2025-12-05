@@ -10,9 +10,9 @@ jobs:
         with:
           cache: "npm"
           cache-dependency-path: package-lock.json
-      - name: Npm install
-        run: npm ci
-      - name: Build
-        run: npm run build
-      - name: Check
-        run: npm run check
+      - name: Setup Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+      - name: Run Biome
+        run: biome ci .
