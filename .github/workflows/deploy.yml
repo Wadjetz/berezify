@@ -6,37 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  push_to_registry:
-    name: Push Docker image to Docker Hub
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v4
-
-      - name: Build and push container image
-        run: |
-          docker login --username wadjetz --password ${{ secrets.GHCR_TOKEN }} ghcr.io
-          docker build -f Dockerfile --tag ghcr.io/wadjetz/berezify:latest .
-          docker push ghcr.io/wadjetz/berezify:latest
-
-      - name: Deploy to server with SSH
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: ${{ secrets.SERVER_PORT }}
-          script: |
-            cd docker-berezify
-            cat > docker-compose.yml << EOF
-            version: '3'
-            services:
-                berezify:
-                    image: ghcr.io/wadjetz/berezify:latest
-                    container_name: berezify
-                    ports:
-                        - 4000:3000
-            EOF
-            docker-compose down
-            docker-compose pull
-            docker-compose up -d
+  check:
+    uses: ./.github/workflows/_check.yml
+  build_container:
+    uses: ./.github/workflows/_build_container.yml
+    secrets: inherit
+    needs: check
+  deploy_to_server:
+    uses: ./.github/workflows/_deploy_to_server.yml
+    secrets: inherit
+    needs: [check, build_container]

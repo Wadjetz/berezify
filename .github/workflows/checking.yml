@@ -1,17 +1,7 @@
 name: Checking
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
-  build:
-    name: Checking
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          cache: "npm"
-          cache-dependency-path: package-lock.json
-      - run: npm ci
-      - run: npm run build
-      - run: npm run check
+  check:
+    uses: ./.github/workflows/_check.yml
