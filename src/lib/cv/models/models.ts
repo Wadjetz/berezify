@@ -1,4 +1,5 @@
 import type { Technology } from "$lib/utils/technologies"
+
 import type { IntlValue } from "./Intl"
 
 export interface Person {
