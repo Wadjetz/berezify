@@ -27,6 +27,7 @@
   import Scala from "virtual:icons/vscode-icons/file-type-scala"
   import Swift from "virtual:icons/vscode-icons/file-type-swift"
   import Typescript from "virtual:icons/vscode-icons/file-type-typescript-official"
+
   import type { Technology } from "$lib/utils/technologies"
 
   interface Props {

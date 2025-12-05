@@ -1,6 +1,7 @@
 <script lang="ts">
   import Meilisearch from "virtual:icons/logos/meilisearch"
   import PostgreSql from "virtual:icons/logos/postgresql"
+
   import { m } from "$lib/paraglide/messages"
   import { type Technology, technologies } from "$lib/utils/technologies"
 

@@ -4,6 +4,7 @@
   import LinkedinIcon from "virtual:icons/mdi/linkedin"
   import PhoneIcon from "virtual:icons/mdi/phone-classic"
   import WebIcon from "virtual:icons/mdi/web"
+
   import { page } from "$app/state"
   import { cvData } from "$lib/cv/data/CvData"
 

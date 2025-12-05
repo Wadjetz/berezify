@@ -1,4 +1,5 @@
 import type { Handle } from "@sveltejs/kit"
+
 import { paraglideMiddleware } from "$lib/paraglide/server"
 
 const paraglideHandle: Handle = ({ event, resolve }) =>

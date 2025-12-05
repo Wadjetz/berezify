@@ -3,6 +3,7 @@
   import HtmlIcon from "virtual:icons/mdi/language-html5"
   import RustIcon from "virtual:icons/mdi/language-rust"
   import TypescriptIcon from "virtual:icons/mdi/language-typescript"
+
   import { m } from "$lib/paraglide/messages"
   import { type Technology, technologies } from "$lib/utils/technologies"
 
