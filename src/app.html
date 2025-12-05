@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="%lang%">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.png" />
@@ -16,6 +16,7 @@
   <script>
     window.dataLayer = window.dataLayer || []
     function gtag() {
+      // biome-ignore lint/complexity/noArguments: no choice
       dataLayer.push(arguments)
     }
     gtag("js", new Date())

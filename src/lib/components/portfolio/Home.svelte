@@ -1,15 +1,15 @@
 <script lang="ts">
   import illustration from "$lib/assets/illustration.svg"
-  import { LL } from "$lib/i18n/i18n-svelte"
+  import { m } from "$lib/paraglide/messages"
 </script>
 
 <section class="content">
   <div class="content-section">
     <h2>
-      <span class="hello">{$LL.portfolio.home.hello()}</span>
+      <span class="hello">{m.portfolio_home_hello()}</span>
       <br />
-      <span class="iam">{$LL.portfolio.home.iam()}</span>
-      <span class="description">{$LL.portfolio.home.description()}</span>
+      <span class="iam">{m.portfolio_home_iam()}</span>
+      <span class="description">{m.portfolio_home_description()}</span>
     </h2>
   </div>
   <div class="illustration-section">

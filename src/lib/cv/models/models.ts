@@ -1,5 +1,5 @@
+import type { Technology } from "$lib/utils/technologies"
 import type { IntlValue } from "./Intl"
-import type { Technology } from "./Technologies"
 
 export interface Person {
   firstName: string

@@ -1,6 +1,4 @@
 <script lang="ts">
-  import type { Technology } from "$lib/cv/models/Technologies"
-
   import Linux from "virtual:icons/logos/linux-tux"
   import Meilisearch from "virtual:icons/logos/meilisearch"
   import MongoDB from "virtual:icons/logos/mongodb-icon"
@@ -29,9 +27,13 @@
   import Scala from "virtual:icons/vscode-icons/file-type-scala"
   import Swift from "virtual:icons/vscode-icons/file-type-swift"
   import Typescript from "virtual:icons/vscode-icons/file-type-typescript-official"
+  import type { Technology } from "$lib/utils/technologies"
 
-  export let technology: Technology
-  export let size: number = 14
+  interface Props {
+    technology: Technology
+    size?: number
+  }
+  let { technology, size = 14 }: Props = $props()
 </script>
 
 {#if technology === "actix"}

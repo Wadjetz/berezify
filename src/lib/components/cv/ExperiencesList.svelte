@@ -2,25 +2,26 @@
   import { format } from "date-fns"
   import { enUS, fr } from "date-fns/locale"
 
-  import type { Locales } from "$lib/i18n/i18n-types"
   import { cvData } from "$lib/cv/data/CvData"
-  import { LL } from "$lib/i18n/i18n-svelte"
+  import { m } from "$lib/paraglide/messages"
+  import { getLocale } from "$lib/paraglide/runtime"
   import Markdown from "$lib/uikit/Markdown.svelte"
   import Tag from "$lib/uikit/Tag.svelte"
   import TechnologyIcon from "$lib/uikit/TechnologyIcon.svelte"
+  import { technologies } from "$lib/utils/technologies"
 
-  export let locale: Locales
+  const locale = $derived(getLocale())
 </script>
 
 <article class="article">
-  <h2>{$LL.experiences.title()}</h2>
+  <h2>{m.experiences_title()}</h2>
 
   {#each cvData.experiences as experience}
     <section>
       <div class="title">
         <h3 class="cv-h3">{experience.title[locale]}</h3>
         {#if experience.freelance}
-          <div class="freelance">{$LL.freelance()}</div>
+          <div class="freelance">{m.freelance()}</div>
         {/if}
       </div>
       <div class="infos">
@@ -43,7 +44,7 @@
       <ul class="technologies">
         {#each experience.technologies as technology}
           <li>
-            <Tag label={$LL.technologies[technology]()}>
+            <Tag label={technologies(technology)}>
               <TechnologyIcon {technology} />
             </Tag>
           </li>

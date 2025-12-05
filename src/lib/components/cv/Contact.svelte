@@ -1,14 +1,13 @@
 <script lang="ts">
-  import { page } from "$app/stores"
-  import { cvData } from "$lib/cv/data/CvData"
-
   import EmailIcon from "virtual:icons/mdi/email"
   import GithubIcon from "virtual:icons/mdi/github"
   import LinkedinIcon from "virtual:icons/mdi/linkedin"
   import PhoneIcon from "virtual:icons/mdi/phone-classic"
   import WebIcon from "virtual:icons/mdi/web"
+  import { page } from "$app/state"
+  import { cvData } from "$lib/cv/data/CvData"
 
-  $: queries = Object.fromEntries(new URLSearchParams($page.url.search))
+  const queries = $derived(Object.fromEntries(new URLSearchParams(page.url.search)))
 </script>
 
 <section>
