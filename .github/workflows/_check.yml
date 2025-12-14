@@ -16,3 +16,8 @@ jobs:
           version: latest
       - name: Run Biome
         run: biome ci .
+      - name: Check
+        run: |
+          npm ci
+          npm run build
+          npm run ci-check

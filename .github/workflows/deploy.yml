@@ -12,7 +12,3 @@ jobs:
     uses: ./.github/workflows/_build_container.yml
     secrets: inherit
     needs: check
-  deploy_to_server:
-    uses: ./.github/workflows/_deploy_to_server.yml
-    secrets: inherit
-    needs: [check, build_container]
