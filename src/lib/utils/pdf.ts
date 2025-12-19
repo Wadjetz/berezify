@@ -2,7 +2,7 @@ import puppeteer from "puppeteer"
 
 export async function getPdfFromUrl(url: string) {
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox"],
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
     headless: true
   })
   const page = await browser.newPage()
