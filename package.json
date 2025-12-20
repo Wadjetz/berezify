@@ -19,7 +19,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
     "@fontsource/open-sans": "^5.2.7",
-    "@iconify/json": "^2.2.419",
+    "@iconify/json": "^2.2.420",
     "@inlang/cli": "^3.0.12",
     "@inlang/paraglide-js": "2.5.0",
     "@sveltejs/adapter-node": "^5.4.0",
@@ -28,7 +28,7 @@
     "@types/sanitize-html": "^2.16.0",
     "globals": "^16.5.0",
     "svelte": "^5.46.0",
-    "svelte-check": "^4.3.4",
+    "svelte-check": "^4.3.5",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "unplugin-icons": "^22.5.0",
