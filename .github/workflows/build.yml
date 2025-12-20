@@ -1,9 +1,15 @@
 name: Build
 
-on: [workflow_call, workflow_dispatch]
+on: 
+  workflow_call:
+  workflow_dispatch:
+  release:
+    types: [published]
 
 jobs:
   check:
+    uses: ./.github/workflows/_check.yml
+  build:
     name: Build container
     runs-on: ubuntu-latest
     steps:
