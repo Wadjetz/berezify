@@ -1,0 +1,7 @@
+.git
+.github
+.svelte-kit
+.vscode
+build
+node_modules
+rest
