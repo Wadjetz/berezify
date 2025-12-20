@@ -1,7 +1,0 @@
-name: Checking
-
-on: [push, workflow_dispatch]
-
-jobs:
-  check:
-    uses: ./.github/workflows/_check.yml
