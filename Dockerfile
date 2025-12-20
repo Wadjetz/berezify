@@ -1,23 +1,24 @@
 FROM node:24-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates \
-    fonts-liberation \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libatk1.0-0 \
-    libcups2 \
-    libdbus-1-3 \
-    libdrm2 \
-    libgbm1 \
-    libnspr4 \
-    libnss3 \
+RUN apt-get update && apt-get install -y \
+    chromium \
     libx11-xcb1 \
     libxcomposite1 \
+    libxcursor1 \
     libxdamage1 \
+    libxi6 \
+    libxtst6 \
+    libnss3 \
     libxrandr2 \
-    xdg-utils \
-    && rm -rf /var/lib/apt/lists/*
+    libasound2 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libgtk-3-0 \
+    libdrm2 \
+    libgbm1 \
+    libxshmfence1 \
+    libglu1-mesa \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY . /berezify
 
