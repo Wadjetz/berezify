@@ -1,5 +1,7 @@
-on:
-  workflow_call:
+name: Check
+
+on: [workflow_call, workflow_dispatch]
+
 jobs:
   check:
     name: Project check

@@ -1,4 +1,4 @@
-name: Deploy to server
+name: Build container
 
 on:
   release:
