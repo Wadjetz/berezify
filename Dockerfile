@@ -1,3 +1,13 @@
+FROM node:alpine AS builder
+
+WORKDIR /app
+
+COPY . ./
+
+RUN npm ci
+RUN npm run build
+RUN npm prune --omit=dev
+
 FROM node:24-slim
 
 RUN apt-get update && apt-get install -y \
@@ -20,13 +30,14 @@ RUN apt-get update && apt-get install -y \
     libglu1-mesa \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-COPY . /berezify
+WORKDIR /app
 
-WORKDIR /berezify
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
 
-RUN npm ci
-RUN npm run build
+EXPOSE 8020
 
-EXPOSE 3000
+ENV NODE_ENV=production
 
 CMD ["node", "build"]
