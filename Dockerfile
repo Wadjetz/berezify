@@ -1,17 +1,6 @@
-FROM node:alpine AS builder
-
-WORKDIR /app
-
-COPY . ./
-
-RUN npm ci
-RUN npm run build
-RUN npm prune --omit=dev
-
 FROM node:24-slim
 
 RUN apt-get update && apt-get install -y \
-    chromium \
     libx11-xcb1 \
     libxcomposite1 \
     libxcursor1 \
@@ -32,11 +21,13 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY --from=builder /app/build ./build
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY . ./
 
-EXPOSE 8020
+RUN npm ci
+RUN npm run build
+RUN npm prune --omit=dev
+
+EXPOSE 3000
 
 ENV NODE_ENV=production
 
