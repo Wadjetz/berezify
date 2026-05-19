@@ -1,4 +1,4 @@
-FROM node:24-slim
+FROM node:26-slim
 
 RUN apt-get update && apt-get install -y \
     libx11-xcb1 \
@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     libgbm1 \
     libxshmfence1 \
     libglu1-mesa \
+    unzip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
