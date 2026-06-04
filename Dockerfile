@@ -1,17 +1,18 @@
 # --- Build ---
 FROM node:26-slim AS builder
+
 WORKDIR /app
 
 ENV PUPPETEER_SKIP_DOWNLOAD=true
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY . ./
-
-RUN npm ci && npm run build && npm prune --omit=dev
+RUN npm run build && npm prune --omit=dev
 
 # --- Run ---
 FROM node:26-slim
 WORKDIR /app
-
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 ENV NODE_ENV=production
@@ -24,5 +25,4 @@ COPY --from=builder /app/build ./build
 COPY --from=builder /app/node_modules ./node_modules
 
 EXPOSE 3000
-
 CMD ["node", "/app/build"]
