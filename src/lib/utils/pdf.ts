@@ -2,7 +2,8 @@ import puppeteer from "puppeteer"
 
 export async function getPdfFromUrl(url: string) {
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH ?? "/usr/bin/chromium",
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
     headless: true
   })
   const page = await browser.newPage()
